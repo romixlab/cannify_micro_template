@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="848" height="1045" viewBox="0 0 848 1045">
+<title>B129A CANnify Micro HV Pico-Lock top view</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="260.00" y="30.00" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="20" text-anchor="start" style="fill:#1f2a24;font-weight:600">B129A CANnify Micro HV Pico-Lock · top view</text>
+<text x="260.00" y="48.00" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="12" text-anchor="start" style="fill:#6b7570">B129A (rev A) · STM32G0B1CET6 (U1, LQFP48)</text>
+<rect x="260.00" y="64.00" width="328.00" height="816.00" rx="32.00" style="fill:#eef1ee;stroke:none"/>
+<path d="M260.0 72.0 A8.00 8.00 0 0 1 268.0 64.0 M260.0 872.0 L260.0 72.0 M588.0 872.0 A8.00 8.00 0 0 1 580.0 880.0 M580.0 64.0 A8.00 8.00 0 0 1 588.0 72.0 M268.0 880.0 A8.00 8.00 0 0 1 260.0 872.0 M268.0 880.0 L580.0 880.0 M580.0 64.0 L268.0 64.0 M588.0 72.0 L588.0 872.0 " style="fill:none;stroke:#5f6b62;stroke-width:1.4"/>
+<rect x="331.99" y="355.19" width="184.01" height="184.01" rx="2.00" style="fill:#cfd8dc;stroke:#455a64;stroke-width:1"/>
+<text x="424.00" y="445.20" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="10.5" text-anchor="middle" style="fill:#1f2a24;font-weight:600">U1</text>
+<text x="424.00" y="457.20" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="10.5" text-anchor="middle" style="fill:#1f2a24;font-weight:400">STM32G0B1CET6</text>
+<rect x="344.88" y="89.20" width="158.24" height="103.68" rx="2.00" style="fill:#d7ccc8;stroke:#5d4037;stroke-width:1"/>
+<text x="424.00" y="133.04" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="10.5" text-anchor="middle" style="fill:#1f2a24;font-weight:600">J3 USB-C</text>
+<text x="424.00" y="145.04" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="10.5" text-anchor="middle" style="fill:#1f2a24;font-weight:400">USB FS, power in, SWD on SBU</text>
+<rect x="334.32" y="767.68" width="179.36" height="109.44" rx="2.00" style="fill:#eceff1;stroke:#78909c;stroke-width:1"/>
+<text x="424.00" y="826.40" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="10.5" text-anchor="middle" style="fill:#1f2a24;font-weight:600">J4 / J5 Pico-Lock</text>
+<text x="424.00" y="838.40" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="10.5" text-anchor="middle" style="fill:#1f2a24;font-weight:400">1 V+ · 2 CANH · 3 CANL · 4 GND</text>
+<rect x="524.08" y="351.12" width="14.24" height="28.96" rx="2.00" style="fill:#fff59d;stroke:#f9a825;stroke-width:1"/>
+<text x="501.20" y="363.60" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="10.5" text-anchor="middle" style="fill:#1f2a24;font-weight:600">D14 blue</text>
+<text x="501.20" y="375.60" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="10.5" text-anchor="middle" style="fill:#1f2a24;font-weight:400">PB14</text>
+<rect x="310.00" y="310.00" width="61.60" height="50.40" rx="2.00" style="fill:#eceff1;stroke:#78909c;stroke-width:1"/>
+<text x="340.80" y="339.20" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="10.5" text-anchor="middle" style="fill:#1f2a24;font-weight:600">Y2 12 MHz</text>
+<rect x="417.20" y="308.40" width="61.60" height="34.40" rx="2.00" style="fill:#eceff1;stroke:#78909c;stroke-width:1"/>
+<text x="448.00" y="339.60" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="10.5" text-anchor="middle" style="fill:#1f2a24;font-weight:600">Y1 32 kHz</text>
+<rect x="434.00" y="557.60" width="82.40" height="115.20" rx="2.00" style="fill:#e0e0e0;stroke:#616161;stroke-width:1"/>
+<text x="475.20" y="613.20" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="10.5" text-anchor="middle" style="fill:#1f2a24;font-weight:600">U2 LV14360</text>
+<text x="475.20" y="625.20" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="10.5" text-anchor="middle" style="fill:#1f2a24;font-weight:400">VIN→5V</text>
+<rect x="310.80" y="426.80" width="12.00" height="40.80" rx="2.00" style="fill:#ffe0b2;stroke:#ef6c00;stroke-width:1"/>
+<text x="316.80" y="421.20" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="10.5" text-anchor="middle" style="fill:#1f2a24;font-weight:600">JP2</text>
+<rect x="526.80" y="476.40" width="12.00" height="40.80" rx="2.00" style="fill:#ffe0b2;stroke:#ef6c00;stroke-width:1"/>
+<text x="532.80" y="532.80" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="10.5" text-anchor="middle" style="fill:#1f2a24;font-weight:600">JP3</text>
+<rect x="266.66" y="70.82" width="30.20" height="802.36" rx="2.00" style="fill:#dfe4e1;stroke:#90a097;stroke-width:1"/>
+<rect x="268.16" y="72.32" width="27.20" height="27.20" rx="1.00" style="fill:#2e7d32;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="281.76" cy="85.92" r="6.12" style="fill:#ffffff"/>
+<rect x="268.16" y="112.96" width="27.20" height="27.20" rx="1.00" style="fill:#2e7d32;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="281.76" cy="126.56" r="6.12" style="fill:#ffffff"/>
+<rect x="268.16" y="153.60" width="27.20" height="27.20" rx="1.00" style="fill:#2e7d32;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="281.76" cy="167.20" r="6.12" style="fill:#ffffff"/>
+<rect x="268.16" y="194.24" width="27.20" height="27.20" rx="1.00" style="fill:#2e7d32;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="281.76" cy="207.84" r="6.12" style="fill:#ffffff"/>
+<rect x="268.16" y="234.88" width="27.20" height="27.20" rx="1.00" style="fill:#2e7d32;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="281.76" cy="248.48" r="6.12" style="fill:#ffffff"/>
+<rect x="268.16" y="275.52" width="27.20" height="27.20" rx="1.00" style="fill:#c62828;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="281.76" cy="289.12" r="6.12" style="fill:#ffffff"/>
+<rect x="268.16" y="316.16" width="27.20" height="27.20" rx="1.00" style="fill:#263238;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="281.76" cy="329.76" r="6.12" style="fill:#ffffff"/>
+<rect x="268.16" y="356.80" width="27.20" height="27.20" rx="1.00" style="fill:#2e7d32;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="281.76" cy="370.40" r="6.12" style="fill:#ffffff"/>
+<rect x="268.16" y="397.44" width="27.20" height="27.20" rx="1.00" style="fill:#2e7d32;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="281.76" cy="411.04" r="6.12" style="fill:#ffffff"/>
+<rect x="268.16" y="438.08" width="27.20" height="27.20" rx="1.00" style="fill:#f57c00;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="281.76" cy="451.68" r="6.12" style="fill:#ffffff"/>
+<rect x="268.16" y="478.72" width="27.20" height="27.20" rx="1.00" style="fill:#2e7d32;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="281.76" cy="492.32" r="6.12" style="fill:#ffffff"/>
+<rect x="268.16" y="519.36" width="27.20" height="27.20" rx="1.00" style="fill:#2e7d32;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="281.76" cy="532.96" r="6.12" style="fill:#ffffff"/>
+<rect x="268.16" y="560.00" width="27.20" height="27.20" rx="1.00" style="fill:#2e7d32;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="281.76" cy="573.60" r="6.12" style="fill:#ffffff"/>
+<rect x="268.16" y="600.64" width="27.20" height="27.20" rx="1.00" style="fill:#2e7d32;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="281.76" cy="614.24" r="6.12" style="fill:#ffffff"/>
+<rect x="268.16" y="641.28" width="27.20" height="27.20" rx="1.00" style="fill:#8d2600;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="281.76" cy="654.88" r="6.12" style="fill:#ffffff"/>
+<rect x="268.16" y="681.92" width="27.20" height="27.20" rx="1.00" style="fill:#d84315;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="281.76" cy="695.52" r="6.12" style="fill:#ffffff"/>
+<rect x="268.16" y="722.56" width="27.20" height="27.20" rx="1.00" style="fill:#263238;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="281.76" cy="736.16" r="6.12" style="fill:#ffffff"/>
+<rect x="268.16" y="763.20" width="27.20" height="27.20" rx="1.00" style="fill:#2e7d32;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="281.76" cy="776.80" r="6.12" style="fill:#ffffff"/>
+<rect x="268.16" y="803.84" width="27.20" height="27.20" rx="1.00" style="fill:#2e7d32;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="281.76" cy="817.44" r="6.12" style="fill:#ffffff"/>
+<rect x="268.16" y="844.48" width="27.20" height="27.20" rx="1.00" style="fill:#2e7d32;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="281.76" cy="858.08" r="6.12" style="fill:#ffffff"/>
+<line x1="281.76" y1="85.92" x2="252.00" y2="85.92" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="281.76" y1="126.56" x2="252.00" y2="126.56" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="281.76" y1="167.20" x2="252.00" y2="167.20" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="281.76" y1="207.84" x2="252.00" y2="207.84" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="281.76" y1="248.48" x2="252.00" y2="248.48" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="281.76" y1="289.12" x2="252.00" y2="289.12" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="281.76" y1="329.76" x2="252.00" y2="329.76" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="281.76" y1="370.40" x2="252.00" y2="370.40" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="281.76" y1="411.04" x2="252.00" y2="411.04" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="281.76" y1="451.68" x2="252.00" y2="451.68" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="281.76" y1="492.32" x2="252.00" y2="492.32" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="281.76" y1="532.96" x2="252.00" y2="532.96" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="281.76" y1="573.60" x2="252.00" y2="573.60" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="281.76" y1="614.24" x2="252.00" y2="614.24" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="281.76" y1="654.88" x2="252.00" y2="654.88" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="281.76" y1="695.52" x2="252.00" y2="695.52" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="281.76" y1="736.16" x2="252.00" y2="736.16" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="281.76" y1="776.80" x2="252.00" y2="776.80" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="281.76" y1="817.44" x2="252.00" y2="817.44" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="281.76" y1="858.08" x2="252.00" y2="858.08" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<text x="250.00" y="89.72" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="end"><tspan style="fill:#2e7d32;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PB4</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  1</tspan></text>
+<text x="250.00" y="130.36" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="end"><tspan style="fill:#2e7d32;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PB5</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  2</tspan></text>
+<text x="250.00" y="171.00" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="end"><tspan style="fill:#2e7d32;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PB6</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  3</tspan></text>
+<text x="250.00" y="211.64" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="end"><tspan style="fill:#2e7d32;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PB7</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  4</tspan></text>
+<text x="250.00" y="252.28" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="end"><tspan style="fill:#2e7d32;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PB9</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  5</tspan></text>
+<text x="250.00" y="292.92" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="end"><tspan style="fill:#c62828;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PF2_NRST</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  6</tspan></text>
+<text x="250.00" y="333.56" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="end"><tspan style="fill:#263238;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">GND</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  7</tspan></text>
+<text x="250.00" y="374.20" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="end"><tspan style="fill:#2e7d32;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PA0</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  8</tspan></text>
+<text x="250.00" y="414.84" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="end"><tspan style="fill:#2e7d32;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PA1</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  9</tspan></text>
+<text x="250.00" y="455.48" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="end"><tspan style="fill:#f57c00;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">VBAT</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  10</tspan></text>
+<text x="250.00" y="496.12" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="end"><tspan style="fill:#2e7d32;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PA2</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  11</tspan></text>
+<text x="250.00" y="536.76" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="end"><tspan style="fill:#2e7d32;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PA3</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  12</tspan></text>
+<text x="250.00" y="577.40" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="end"><tspan style="fill:#2e7d32;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PA4</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  13</tspan></text>
+<text x="250.00" y="618.04" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="end"><tspan style="fill:#2e7d32;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PA5</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  14</tspan></text>
+<text x="250.00" y="658.68" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="end"><tspan style="fill:#8d2600;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">+VIN_CAN</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  15</tspan></text>
+<text x="250.00" y="699.32" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="end"><tspan style="fill:#d84315;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">+5V0_DCDC</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  16</tspan></text>
+<text x="250.00" y="739.96" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="end"><tspan style="fill:#263238;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">GND</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  17</tspan></text>
+<text x="250.00" y="780.60" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="end"><tspan style="fill:#2e7d32;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PA6</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  18</tspan></text>
+<text x="250.00" y="821.24" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="end"><tspan style="fill:#2e7d32;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PA7</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  19</tspan></text>
+<text x="250.00" y="861.88" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="end"><tspan style="fill:#2e7d32;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PB0</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  20</tspan></text>
+<text x="258.16" y="64.32" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="end" style="fill:#1f2a24;font-weight:700;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">J1</text>
+<rect x="551.14" y="70.82" width="30.20" height="802.36" rx="2.00" style="fill:#dfe4e1;stroke:#90a097;stroke-width:1"/>
+<rect x="552.64" y="72.32" width="27.20" height="27.20" rx="1.00" style="fill:#2e7d32;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="566.24" cy="85.92" r="6.12" style="fill:#ffffff"/>
+<rect x="552.64" y="112.96" width="27.20" height="27.20" rx="1.00" style="fill:#2e7d32;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="566.24" cy="126.56" r="6.12" style="fill:#ffffff"/>
+<rect x="552.64" y="153.60" width="27.20" height="27.20" rx="1.00" style="fill:#2e7d32;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="566.24" cy="167.20" r="6.12" style="fill:#ffffff"/>
+<rect x="552.64" y="194.24" width="27.20" height="27.20" rx="1.00" style="fill:#2e7d32;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="566.24" cy="207.84" r="6.12" style="fill:#ffffff"/>
+<rect x="552.64" y="234.88" width="27.20" height="27.20" rx="1.00" style="fill:#2e7d32;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="566.24" cy="248.48" r="6.12" style="fill:#ffffff"/>
+<rect x="552.64" y="275.52" width="27.20" height="27.20" rx="1.00" style="fill:#2e7d32;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="566.24" cy="289.12" r="6.12" style="fill:#ffffff"/>
+<rect x="552.64" y="316.16" width="27.20" height="27.20" rx="1.00" style="fill:#9e9e9e;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="566.24" cy="329.76" r="6.12" style="fill:#ffffff"/>
+<rect x="552.64" y="356.80" width="27.20" height="27.20" rx="1.00" style="fill:#263238;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="566.24" cy="370.40" r="6.12" style="fill:#ffffff"/>
+<rect x="552.64" y="397.44" width="27.20" height="27.20" rx="1.00" style="fill:#c62828;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="566.24" cy="411.04" r="6.12" style="fill:#ffffff"/>
+<rect x="552.64" y="438.08" width="27.20" height="27.20" rx="1.00" style="fill:#c62828;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="566.24" cy="451.68" r="6.12" style="fill:#ffffff"/>
+<rect x="552.64" y="478.72" width="27.20" height="27.20" rx="1.00" style="fill:#f57c00;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="566.24" cy="492.32" r="6.12" style="fill:#ffffff"/>
+<rect x="552.64" y="519.36" width="27.20" height="27.20" rx="1.00" style="fill:#f57c00;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="566.24" cy="532.96" r="6.12" style="fill:#ffffff"/>
+<rect x="552.64" y="560.00" width="27.20" height="27.20" rx="1.00" style="fill:#263238;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="566.24" cy="573.60" r="6.12" style="fill:#ffffff"/>
+<rect x="552.64" y="600.64" width="27.20" height="27.20" rx="1.00" style="fill:#2e7d32;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="566.24" cy="614.24" r="6.12" style="fill:#ffffff"/>
+<rect x="552.64" y="641.28" width="27.20" height="27.20" rx="1.00" style="fill:#2e7d32;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="566.24" cy="654.88" r="6.12" style="fill:#ffffff"/>
+<rect x="552.64" y="681.92" width="27.20" height="27.20" rx="1.00" style="fill:#2e7d32;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="566.24" cy="695.52" r="6.12" style="fill:#ffffff"/>
+<rect x="552.64" y="722.56" width="27.20" height="27.20" rx="1.00" style="fill:#2e7d32;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="566.24" cy="736.16" r="6.12" style="fill:#ffffff"/>
+<rect x="552.64" y="763.20" width="27.20" height="27.20" rx="1.00" style="fill:#2e7d32;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="566.24" cy="776.80" r="6.12" style="fill:#ffffff"/>
+<rect x="552.64" y="803.84" width="27.20" height="27.20" rx="1.00" style="fill:#2e7d32;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="566.24" cy="817.44" r="6.12" style="fill:#ffffff"/>
+<rect x="552.64" y="844.48" width="27.20" height="27.20" rx="1.00" style="fill:#2e7d32;stroke:#ffffff;stroke-width:0.8"/>
+<circle cx="566.24" cy="858.08" r="6.12" style="fill:#ffffff"/>
+<line x1="566.24" y1="85.92" x2="596.00" y2="85.92" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="566.24" y1="126.56" x2="596.00" y2="126.56" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="566.24" y1="167.20" x2="596.00" y2="167.20" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="566.24" y1="207.84" x2="596.00" y2="207.84" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="566.24" y1="248.48" x2="596.00" y2="248.48" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="566.24" y1="289.12" x2="596.00" y2="289.12" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="566.24" y1="329.76" x2="596.00" y2="329.76" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="566.24" y1="370.40" x2="596.00" y2="370.40" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="566.24" y1="411.04" x2="596.00" y2="411.04" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="566.24" y1="451.68" x2="596.00" y2="451.68" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="566.24" y1="492.32" x2="596.00" y2="492.32" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="566.24" y1="532.96" x2="596.00" y2="532.96" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="566.24" y1="573.60" x2="596.00" y2="573.60" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="566.24" y1="614.24" x2="596.00" y2="614.24" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="566.24" y1="654.88" x2="596.00" y2="654.88" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="566.24" y1="695.52" x2="596.00" y2="695.52" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="566.24" y1="736.16" x2="596.00" y2="736.16" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="566.24" y1="776.80" x2="596.00" y2="776.80" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="566.24" y1="817.44" x2="596.00" y2="817.44" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<line x1="566.24" y1="858.08" x2="596.00" y2="858.08" style="stroke:#b8c0bb;stroke-width:0.7"/>
+<text x="598.00" y="89.72" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="start"><tspan style="fill:#2e7d32;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PB3</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  1</tspan></text>
+<text x="598.00" y="130.36" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="start"><tspan style="fill:#2e7d32;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PD3</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  2</tspan></text>
+<text x="598.00" y="171.00" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="start"><tspan style="fill:#2e7d32;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PD2</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  3</tspan></text>
+<text x="598.00" y="211.64" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="start"><tspan style="fill:#2e7d32;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PD0</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  4</tspan></text>
+<text x="598.00" y="252.28" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="start"><tspan style="fill:#2e7d32;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PA15</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  5</tspan></text>
+<text x="598.00" y="292.92" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="start"><tspan style="fill:#2e7d32;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PA10</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  6</tspan></text>
+<text x="598.00" y="333.56" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="start"><tspan style="fill:#9e9e9e;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">—</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  7</tspan></text>
+<text x="598.00" y="374.20" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="start"><tspan style="fill:#263238;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">GND</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  8</tspan></text>
+<text x="598.00" y="414.84" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="start"><tspan style="fill:#c62828;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">SWCLK</tspan><tspan style="fill:#c62828;font-weight:400;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round"> BOOT0</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  9</tspan></text>
+<text x="598.00" y="455.48" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="start"><tspan style="fill:#c62828;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">SWDIO</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  10</tspan></text>
+<text x="598.00" y="496.12" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="start"><tspan style="fill:#f57c00;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">+3V3_DCDC</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  11</tspan></text>
+<text x="598.00" y="536.76" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="start"><tspan style="fill:#f57c00;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">+VDDIO2</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  12</tspan></text>
+<text x="598.00" y="577.40" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="start"><tspan style="fill:#263238;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">GND</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  13</tspan></text>
+<text x="598.00" y="618.04" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="start"><tspan style="fill:#2e7d32;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PA9</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  14</tspan></text>
+<text x="598.00" y="658.68" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="start"><tspan style="fill:#2e7d32;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PA8</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  15</tspan></text>
+<text x="598.00" y="699.32" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="start"><tspan style="fill:#2e7d32;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PB15</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  16</tspan></text>
+<text x="598.00" y="739.96" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="start"><tspan style="fill:#2e7d32;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PB13</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  17</tspan></text>
+<text x="598.00" y="780.60" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="start"><tspan style="fill:#2e7d32;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PB12</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  18</tspan></text>
+<text x="598.00" y="821.24" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="start"><tspan style="fill:#2e7d32;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PB11</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  19</tspan></text>
+<text x="598.00" y="861.88" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="start"><tspan style="fill:#2e7d32;font-weight:600;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">PB1</tspan><tspan style="fill:#6b7570;font-size:8px;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">  20</tspan></text>
+<text x="589.84" y="64.32" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="11" text-anchor="start" style="fill:#1f2a24;font-weight:700;paint-order:stroke;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round">J2</text>
+<circle cx="265.00" cy="910.00" r="5.00" style="fill:#2e7d32"/>
+<text x="274.00" y="914.00" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="10.5" text-anchor="start" style="fill:#1f2a24">free GPIO: only on the headers</text>
+<circle cx="265.00" cy="928.00" r="5.00" style="fill:#ef8f00"/>
+<text x="274.00" y="932.00" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="10.5" text-anchor="start" style="fill:#1f2a24">shared: board function by default, a solder bridge or jumper frees it</text>
+<circle cx="265.00" cy="946.00" r="5.00" style="fill:#c62828"/>
+<text x="274.00" y="950.00" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="10.5" text-anchor="start" style="fill:#1f2a24">taken: debug port, reset, a board part</text>
+<circle cx="522.44" cy="946.00" r="5.00" style="fill:#6a1b9a"/>
+<text x="531.44" y="950.00" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="10.5" text-anchor="start" style="fill:#1f2a24">function: crystal, VBAT, VREF</text>
+<circle cx="726.96" cy="946.00" r="5.00" style="fill:#f57c00"/>
+<text x="735.96" y="950.00" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="10.5" text-anchor="start" style="fill:#1f2a24">3.3 V / VDD</text>
+<circle cx="265.00" cy="964.00" r="5.00" style="fill:#d84315"/>
+<text x="274.00" y="968.00" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="10.5" text-anchor="start" style="fill:#1f2a24">5 V</text>
+<circle cx="316.64" cy="964.00" r="5.00" style="fill:#8d2600"/>
+<text x="325.64" y="968.00" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="10.5" text-anchor="start" style="fill:#1f2a24">VIN / E5V</text>
+<circle cx="403.56" cy="964.00" r="5.00" style="fill:#263238"/>
+<text x="412.56" y="968.00" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="10.5" text-anchor="start" style="fill:#1f2a24">GND</text>
+<rect x="260.00" y="976.00" width="12.00" height="7.00" rx="1.00" style="fill:#1f2a24;stroke:#1f2a24"/>
+<text x="276.00" y="986.00" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="10.5" text-anchor="start" style="fill:#1f2a24">solder bridge ON (0 Ω fitted)</text>
+<rect x="450.00" y="976.00" width="12.00" height="7.00" rx="1.00" style="fill:#ffffff;stroke:#1f2a24"/>
+<text x="466.00" y="986.00" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="10.5" text-anchor="start" style="fill:#1f2a24">solder bridge OFF (open) · 0 on this side</text>
+<text x="260.00" y="1004.00" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="10" text-anchor="start" style="fill:#6b7570">Header labels: net name, what the pin does, Arduino name.</text>
+<text x="260.00" y="1020.00" font-family="'IBM Plex Sans', Inter, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif" font-size="9.5" text-anchor="start" style="fill:#6b7570">Geometry: B129A cannify_micro.kicad_pcb (KiCad 8) · B129A schematic rev A (24 Dec 2023) · STM32G0B1xx datasheet DS13560 Rev 6 · TCAN1044V datasheet · drawn by boardmap (bedrock_board)</text>
+</svg>

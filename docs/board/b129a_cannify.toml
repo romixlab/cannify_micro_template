@@ -1,0 +1,218 @@
+# Board description for boardmap (bedrock_board): what to draw of the B129A CANnify Micro HV Pico-Lock and what every
+# pin does. Facts: the B129A KiCad schematic and board (hw/b129_cannify_micro/source/b129a, rev A, 24 Dec 2023),
+# mcan's boards/b129.md, the TCAN1044V and STM32G0B1xx (DS13560) datasheets.
+
+[board]
+name = "B129A CANnify Micro HV Pico-Lock"
+pcb = "B129A (rev A)"
+mcu = "STM32G0B1CET6 (U1, LQFP48)"
+mcu_ref = "U1"
+geometry = "b129a_cannify.geometry.json"
+sources = ["B129A schematic rev A (24 Dec 2023)", "STM32G0B1xx datasheet DS13560 Rev 6", "TCAN1044V datasheet"]
+scale = 16.0
+
+[[view.connector]]
+ref = "J1"
+label = "J1"
+labels = "left"
+numbers = true
+
+[[view.connector]]
+ref = "J2"
+label = "J2"
+labels = "right"
+numbers = true
+
+[[view.part]]
+ref = "U1"
+label = "U1\nSTM32G0B1CET6"
+kind = "mcu"
+
+[[view.part]]
+ref = "J3"
+label = "J3 USB-C\nUSB FS, power in, SWD on SBU"
+kind = "usb"
+dy = -6
+
+[[view.part]]
+ref = "J4"
+label = "J4 / J5 Pico-Lock\n1 V+ · 2 CANH · 3 CANL · 4 GND"
+kind = "other"
+dy = 6
+
+# D14 (blue): anode through R27 (1k69) from PB14, cathode to GND, so PB14 high lights it. PB14 is TIM15_CH1 (AF5,
+# DS13560 alternate functions): a PWM there breathes it.
+[[view.part]]
+ref = "D14"
+label = "D14 blue\nPB14"
+kind = "led"
+dx = -30
+
+[[view.part]]
+ref = "Y2"
+label = "Y2 12 MHz"
+kind = "other"
+
+[[view.part]]
+ref = "Y1"
+label = "Y1 32 kHz"
+kind = "other"
+dy = 10
+
+[[view.part]]
+ref = "U8"
+label = "U8 TCAN1044V\nCAN FD"
+kind = "chip"
+
+[[view.part]]
+ref = "U2"
+label = "U2 LV14360\nVIN→5V"
+kind = "chip"
+
+[[view.part]]
+ref = "U3"
+label = "U3 RT5760\n5V→3V3"
+kind = "chip"
+
+[[view.part]]
+ref = "U4"
+label = "U4 AOZ1376\nUSB OVP"
+kind = "chip"
+dy = 10
+
+[[view.part]]
+ref = "U7"
+label = "U7 TS3A5223\nSWD↔SBU"
+kind = "chip"
+
+[[view.part]]
+ref = "JP2"
+label = "JP2"
+kind = "jumper"
+dy = -30
+
+[[view.part]]
+ref = "JP3"
+label = "JP3"
+kind = "jumper"
+dy = 32
+
+[pins]
+PA13 = { role = "taken", short = "", note = "SWD data: J2-10, and the USB-C SBU2 through U7 (TS3A5223) when a debug accessory pulls both CC lines up." }
+PA14 = { role = "taken", short = "BOOT0", note = "SWD clock: J2-9, and the USB-C SBU1 through U7. Also BOOT0: R28 (10k) pulls it to GND, so the chip boots from flash." }
+PF2 = { role = "taken", short = "", note = "Reset, on J1-6. Not a GPIO on this board." }
+PA11 = { role = "taken", short = "USB D-", note = "USB FS D- to the USB-C J3 (pin 33, the PA9 remap pin), ESD D3." }
+PA12 = { role = "taken", short = "USB D+", note = "USB FS D+ to the USB-C J3 (pin 34, the PA10 remap pin), ESD D3." }
+PB14 = { role = "taken", short = "LED", note = "The blue LED D14 through R27 (1k69): high lights it. TIM15_CH1 (AF5) for a PWM breathe." }
+PD1 = { role = "taken", short = "CAN TX", note = "FDCAN1_TX (AF3) to the TCAN1044V (U8) TXD." }
+PB8 = { role = "taken", short = "CAN RX", note = "FDCAN1_RX (AF3) from the TCAN1044V (U8) RXD. The CubeMX file has PD0 here; the schematic and board have PB8." }
+PC13 = { role = "taken", short = "CAN STBY", note = "The TCAN1044V's STB: low for normal mode, high (or floating) leaves the transceiver in standby. No resistor on the board." }
+PB2 = { role = "taken", short = "VUSB/10.6", note = "ADC1_IN10: USB VBUS through R3 / R4 (16k2 / 1k69, ÷ 10.6)." }
+PB10 = { role = "taken", short = "VCAN/24.2", note = "ADC1_IN11: +VIN_CAN through R30 / R31 (39k2 / 1k69, ÷ 24.2)." }
+PC14 = { role = "function", short = "LSE", note = "32.768 kHz crystal Y1 (OSC32_IN). Not on the headers." }
+PC15 = { role = "function", short = "LSE", note = "32.768 kHz crystal Y1 (OSC32_OUT). Not on the headers." }
+PF0 = { role = "function", short = "HSE", note = "12 MHz crystal Y2 (OSC_IN), the HSE. Not on the headers." }
+PF1 = { role = "function", short = "HSE", note = "12 MHz crystal Y2 (OSC_OUT). Not on the headers." }
+PA4 = { role = "free", short = "", note = "J1-13. Not 5 V tolerant (the schematic's note: every IO but PA4 and PA5 is)." }
+PA5 = { role = "free", short = "", note = "J1-14. Not 5 V tolerant (the schematic's note: every IO but PA4 and PA5 is)." }
+PA9 = { role = "free", short = "", note = "J2-14. Its own pin 29, not the USB pin 33 it can be remapped onto." }
+PA10 = { role = "free", short = "", note = "J2-6. Its own pin 32, not the USB pin 34 it can be remapped onto." }
+PD0 = { role = "free", short = "", note = "J2-4. FDCAN1_RX can sit here (AF3), but the transceiver's RXD goes to PB8." }
+
+[[power.node]]
+id = "usb"
+label = "J3 USB-C VBUS\n+VIN_USB · 5k1 on CC: a sink\nD4 TVS 24 V · PB2 ÷ 10.6"
+kind = "source"
+col = 0
+row = 0
+
+[[power.node]]
+id = "can"
+label = "J4 / J5 Pico-Lock V+\n+VCAN_J · up to 53 V on the bus\nD11 TVS 56 V"
+kind = "source"
+col = 0
+row = 1
+
+[[power.node]]
+id = "u4"
+label = "U4 AOZ1376\nOVP 5.8 V · reverse current\nblocking · soft start"
+kind = "switch"
+col = 1
+row = 0
+
+[[power.node]]
+id = "vincan"
+label = "+VIN_CAN\nJ1-15 · PB10 ÷ 24.2"
+kind = "rail"
+col = 1
+row = 1
+
+[[power.node]]
+id = "u2"
+label = "U2 LV14360 buck\n4.3–60 V in · 3 A · 500 kHz"
+kind = "regulator"
+col = 2
+row = 1
+
+[[power.node]]
+id = "5v"
+label = "+5V0_DCDC\nJ1-16 · TCAN1044V VCC\n2.5 A at most"
+kind = "rail"
+col = 3
+row = 0
+
+[[power.node]]
+id = "u3"
+label = "U3 RT5760 buck\n1 A · 2.2 MHz"
+kind = "regulator"
+col = 4
+row = 0
+
+[[power.node]]
+id = "3v3"
+label = "+3V3_DCDC\nJ2-11 · TCAN1044V VIO\n0.8 A at most"
+kind = "rail"
+col = 5
+row = 0
+
+[[power.node]]
+id = "vdd"
+label = "U1 VDD\nVBAT through JP2\nVDDIO2 through JP3"
+kind = "load"
+col = 5
+row = 1
+
+[[power.edge]]
+from = "usb"
+to = "u4"
+label = "VBUS"
+
+[[power.edge]]
+from = "u4"
+to = "5v"
+
+[[power.edge]]
+from = "can"
+to = "vincan"
+label = "F1 4 A, D12"
+
+[[power.edge]]
+from = "vincan"
+to = "u2"
+
+[[power.edge]]
+from = "u2"
+to = "5v"
+
+[[power.edge]]
+from = "5v"
+to = "u3"
+
+[[power.edge]]
+from = "u3"
+to = "3v3"
+
+[[power.edge]]
+from = "3v3"
+to = "vdd"
+label = "JP2, JP3 bridged"

@@ -1,0 +1,42 @@
+name: Setup
+
+# `just setup` on fresh runners, then `just setup --check`: keeps scripts/setup.py from rotting. Weekly, because what
+# it installs changes upstream, and on changes to the script.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 4 * * 1"
+  pull_request:
+    paths: [scripts/setup.py, justfile, firmware/rust-toolchain.toml, .github/workflows/setup.yml]
+  push:
+    branches: [main]
+    paths: [scripts/setup.py, justfile, firmware/rust-toolchain.toml, .github/workflows/setup.yml]
+
+permissions:
+  contents: read
+
+env:
+  # ww and boardmap cannot be installed from git yet: their workspaces take sibling repositories by path. Drop these
+  # once `cargo install --git` works for wire_weaver_cli and bedrock_board_cli.
+  SKIP: --skip ww --skip boardmap
+  SKIP_REASON: ww and boardmap skipped, their workspaces take sibling repositories by path (no cargo install --git yet)
+
+jobs:
+  setup:
+    name: just setup (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            flags: --root # runs the root steps too (passwordless sudo): packages and the udev rule
+          - os: windows-latest
+            flags: --no-probe # the ST-LINK driver is a download from st.com
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v6
+      - uses: extractions/setup-just@v3
+      - run: echo "::notice::${{ env.SKIP_REASON }}"
+      - run: just setup ${{ matrix.flags }} ${{ env.SKIP }}
+      - run: just setup --check ${{ matrix.flags == '--no-probe' && '--no-probe' || '' }} ${{ env.SKIP }}

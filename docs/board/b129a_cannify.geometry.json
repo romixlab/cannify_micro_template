@@ -1,0 +1,3825 @@
+{
+  "source": "B129A cannify_micro.kicad_pcb (KiCad 8)",
+  "bbox": [
+    137.05,
+    83.45,
+    157.55,
+    134.45
+  ],
+  "outline": [
+    {
+      "kind": "arc",
+      "from": [
+        137.05,
+        83.95
+      ],
+      "mid": [
+        137.196447,
+        83.596447
+      ],
+      "to": [
+        137.55,
+        83.45
+      ]
+    },
+    {
+      "kind": "line",
+      "from": [
+        137.05,
+        133.95
+      ],
+      "to": [
+        137.05,
+        83.95
+      ]
+    },
+    {
+      "kind": "arc",
+      "from": [
+        157.55,
+        133.95
+      ],
+      "mid": [
+        157.403553,
+        134.303553
+      ],
+      "to": [
+        157.05,
+        134.45
+      ]
+    },
+    {
+      "kind": "arc",
+      "from": [
+        157.05,
+        83.45
+      ],
+      "mid": [
+        157.403553,
+        83.596447
+      ],
+      "to": [
+        157.55,
+        83.95
+      ]
+    },
+    {
+      "kind": "arc",
+      "from": [
+        137.55,
+        134.45
+      ],
+      "mid": [
+        137.196447,
+        134.303553
+      ],
+      "to": [
+        137.05,
+        133.95
+      ]
+    },
+    {
+      "kind": "line",
+      "from": [
+        137.55,
+        134.45
+      ],
+      "to": [
+        157.05,
+        134.45
+      ]
+    },
+    {
+      "kind": "line",
+      "from": [
+        157.05,
+        83.45
+      ],
+      "to": [
+        137.55,
+        83.45
+      ]
+    },
+    {
+      "kind": "line",
+      "from": [
+        157.55,
+        83.95
+      ],
+      "to": [
+        157.55,
+        133.95
+      ]
+    }
+  ],
+  "footprints": {
+    "D1": {
+      "value": "ESD",
+      "side": "F",
+      "at": [
+        145.2,
+        93.1
+      ],
+      "rot": -90.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            145.7,
+            92.44999999999999
+          ],
+          "size": [
+            0.5,
+            0.6
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "SBU1",
+          "pin": "K1"
+        },
+        {
+          "number": "2",
+          "at": [
+            144.7,
+            92.44999999999999
+          ],
+          "size": [
+            0.5,
+            0.6
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "CC2",
+          "pin": "K2"
+        },
+        {
+          "number": "3",
+          "at": [
+            145.2,
+            93.75
+          ],
+          "size": [
+            0.5,
+            0.6
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "A"
+        }
+      ]
+    },
+    "D10": {
+      "value": "PESD2CANFD24V-QBZ",
+      "side": "B",
+      "at": [
+        150.2,
+        125.1
+      ],
+      "rot": 0.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            149.875,
+            125.6
+          ],
+          "size": [
+            0.35,
+            0.5
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "CANH",
+          "pin": "A1"
+        },
+        {
+          "number": "2",
+          "at": [
+            150.52499999999998,
+            125.6
+          ],
+          "size": [
+            0.35,
+            0.5
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "CANL",
+          "pin": "A2"
+        },
+        {
+          "number": "3",
+          "at": [
+            150.2,
+            124.91
+          ],
+          "size": [
+            0.9,
+            0.44
+          ],
+          "shape": "other",
+          "through": false,
+          "net": "GND",
+          "pin": "common"
+        }
+      ]
+    },
+    "D11": {
+      "value": "Vbr=56V",
+      "side": "B",
+      "at": [
+        145.2,
+        124.9
+      ],
+      "rot": -90.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            145.2,
+            123.5
+          ],
+          "size": [
+            1.1,
+            1.1
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "A1"
+        },
+        {
+          "number": "2",
+          "at": [
+            145.2,
+            126.30000000000001
+          ],
+          "size": [
+            1.1,
+            1.1
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "+VCAN_J",
+          "pin": "A2"
+        }
+      ]
+    },
+    "D12": {
+      "value": "Schottky 3A",
+      "side": "B",
+      "at": [
+        145.2,
+        120.3
+      ],
+      "rot": -90.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            145.2,
+            118.89999999999999
+          ],
+          "size": [
+            1.1,
+            1.1
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "+VIN_CAN",
+          "pin": "K"
+        },
+        {
+          "number": "2",
+          "at": [
+            145.2,
+            121.7
+          ],
+          "size": [
+            1.1,
+            1.1
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "+VCAN_F",
+          "pin": "A"
+        }
+      ]
+    },
+    "D14": {
+      "value": "LED",
+      "side": "F",
+      "at": [
+        154.0,
+        102.3
+      ],
+      "rot": -90.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            154.0,
+            101.815
+          ],
+          "size": [
+            0.64,
+            0.59
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "K"
+        },
+        {
+          "number": "2",
+          "at": [
+            154.0,
+            102.785
+          ],
+          "size": [
+            0.64,
+            0.59
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "Net-(D14-A)",
+          "pin": "A"
+        }
+      ]
+    },
+    "D2": {
+      "value": "ESD",
+      "side": "F",
+      "at": [
+        149.4,
+        93.1
+      ],
+      "rot": -90.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            149.9,
+            92.44999999999999
+          ],
+          "size": [
+            0.5,
+            0.6
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "SBU2",
+          "pin": "K1"
+        },
+        {
+          "number": "2",
+          "at": [
+            148.9,
+            92.44999999999999
+          ],
+          "size": [
+            0.5,
+            0.6
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "CC1",
+          "pin": "K2"
+        },
+        {
+          "number": "3",
+          "at": [
+            149.4,
+            93.75
+          ],
+          "size": [
+            0.5,
+            0.6
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "A"
+        }
+      ]
+    },
+    "D3": {
+      "value": "ESD",
+      "side": "F",
+      "at": [
+        147.3,
+        93.1
+      ],
+      "rot": -90.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            147.8,
+            92.44999999999999
+          ],
+          "size": [
+            0.5,
+            0.6
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "USB_N",
+          "pin": "K1"
+        },
+        {
+          "number": "2",
+          "at": [
+            146.8,
+            92.44999999999999
+          ],
+          "size": [
+            0.5,
+            0.6
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "USB_P",
+          "pin": "K2"
+        },
+        {
+          "number": "3",
+          "at": [
+            147.3,
+            93.75
+          ],
+          "size": [
+            0.5,
+            0.6
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "A"
+        }
+      ]
+    },
+    "D4": {
+      "value": "Vbr=24V Vcl=35V",
+      "side": "B",
+      "at": [
+        147.3,
+        91.5
+      ],
+      "rot": 180.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            148.75,
+            91.5
+          ],
+          "size": [
+            1.3,
+            1.4
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "+VIN_USB",
+          "pin": "A1"
+        },
+        {
+          "number": "2",
+          "at": [
+            145.85000000000002,
+            91.5
+          ],
+          "size": [
+            1.3,
+            1.4
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "A2"
+        }
+      ]
+    },
+    "D5": {
+      "value": "Schottky 3A",
+      "side": "B",
+      "at": [
+        147.4,
+        116.6
+      ],
+      "rot": 0.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            146.0,
+            116.6
+          ],
+          "size": [
+            1.1,
+            1.1
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "LV_SW",
+          "pin": "K"
+        },
+        {
+          "number": "2",
+          "at": [
+            148.8,
+            116.6
+          ],
+          "size": [
+            1.1,
+            1.1
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "A"
+        }
+      ]
+    },
+    "D6": {
+      "value": "5V6",
+      "side": "B",
+      "at": [
+        149.8,
+        101.5
+      ],
+      "rot": 180.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            150.5,
+            101.5
+          ],
+          "size": [
+            0.6,
+            0.7
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "CC1_PR",
+          "pin": "K"
+        },
+        {
+          "number": "2",
+          "at": [
+            149.10000000000002,
+            101.5
+          ],
+          "size": [
+            0.6,
+            0.7
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "A"
+        }
+      ]
+    },
+    "D7": {
+      "value": "5V6",
+      "side": "B",
+      "at": [
+        141.3,
+        101.4
+      ],
+      "rot": 0.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            140.60000000000002,
+            101.4
+          ],
+          "size": [
+            0.6,
+            0.7
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "CC2_PR",
+          "pin": "K"
+        },
+        {
+          "number": "2",
+          "at": [
+            142.0,
+            101.4
+          ],
+          "size": [
+            0.6,
+            0.7
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "A"
+        }
+      ]
+    },
+    "D8": {
+      "value": "5V6",
+      "side": "F",
+      "at": [
+        145.1,
+        97.0
+      ],
+      "rot": 180.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            145.79999999999998,
+            97.0
+          ],
+          "size": [
+            0.6,
+            0.7
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "SBU1_PR",
+          "pin": "K"
+        },
+        {
+          "number": "2",
+          "at": [
+            144.4,
+            97.0
+          ],
+          "size": [
+            0.6,
+            0.7
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "A"
+        }
+      ]
+    },
+    "D9": {
+      "value": "5V6",
+      "side": "F",
+      "at": [
+        149.5,
+        97.0
+      ],
+      "rot": 180.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            150.2,
+            97.0
+          ],
+          "size": [
+            0.6,
+            0.7
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "SBU2_PR",
+          "pin": "K"
+        },
+        {
+          "number": "2",
+          "at": [
+            148.8,
+            97.0
+          ],
+          "size": [
+            0.6,
+            0.7
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "A"
+        }
+      ]
+    },
+    "J1": {
+      "value": "Conn_01x20",
+      "side": "B",
+      "at": [
+        138.41,
+        84.82
+      ],
+      "rot": 180.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            138.41,
+            84.82
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PB4",
+          "pin": "Pin_1"
+        },
+        {
+          "number": "2",
+          "at": [
+            138.41,
+            87.36
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PB5",
+          "pin": "Pin_2"
+        },
+        {
+          "number": "3",
+          "at": [
+            138.41,
+            89.89999999999999
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PB6",
+          "pin": "Pin_3"
+        },
+        {
+          "number": "4",
+          "at": [
+            138.41,
+            92.44
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PB7",
+          "pin": "Pin_4"
+        },
+        {
+          "number": "5",
+          "at": [
+            138.41,
+            94.97999999999999
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PB9",
+          "pin": "Pin_5"
+        },
+        {
+          "number": "6",
+          "at": [
+            138.41,
+            97.52
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PF2_NRST",
+          "pin": "Pin_6"
+        },
+        {
+          "number": "7",
+          "at": [
+            138.41,
+            100.05999999999999
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "GND",
+          "pin": "Pin_7"
+        },
+        {
+          "number": "8",
+          "at": [
+            138.41,
+            102.6
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PA0",
+          "pin": "Pin_8"
+        },
+        {
+          "number": "9",
+          "at": [
+            138.41,
+            105.13999999999999
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PA1",
+          "pin": "Pin_9"
+        },
+        {
+          "number": "10",
+          "at": [
+            138.41,
+            107.67999999999999
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "VBAT",
+          "pin": "Pin_10"
+        },
+        {
+          "number": "11",
+          "at": [
+            138.41,
+            110.22
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PA2",
+          "pin": "Pin_11"
+        },
+        {
+          "number": "12",
+          "at": [
+            138.41,
+            112.75999999999999
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PA3",
+          "pin": "Pin_12"
+        },
+        {
+          "number": "13",
+          "at": [
+            138.41,
+            115.3
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PA4",
+          "pin": "Pin_13"
+        },
+        {
+          "number": "14",
+          "at": [
+            138.41,
+            117.84
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PA5",
+          "pin": "Pin_14"
+        },
+        {
+          "number": "15",
+          "at": [
+            138.41,
+            120.38
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "+VIN_CAN",
+          "pin": "Pin_15"
+        },
+        {
+          "number": "16",
+          "at": [
+            138.41,
+            122.91999999999999
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "+5V0_DCDC",
+          "pin": "Pin_16"
+        },
+        {
+          "number": "17",
+          "at": [
+            138.41,
+            125.46
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "GND",
+          "pin": "Pin_17"
+        },
+        {
+          "number": "18",
+          "at": [
+            138.41,
+            128.0
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PA6",
+          "pin": "Pin_18"
+        },
+        {
+          "number": "19",
+          "at": [
+            138.41,
+            130.54
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PA7",
+          "pin": "Pin_19"
+        },
+        {
+          "number": "20",
+          "at": [
+            138.41,
+            133.07999999999998
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PB0",
+          "pin": "Pin_20"
+        }
+      ]
+    },
+    "J2": {
+      "value": "Conn_01x20",
+      "side": "B",
+      "at": [
+        156.19,
+        84.82
+      ],
+      "rot": 180.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            156.19,
+            84.82
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PB3",
+          "pin": "Pin_1"
+        },
+        {
+          "number": "2",
+          "at": [
+            156.19,
+            87.36
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PD3",
+          "pin": "Pin_2"
+        },
+        {
+          "number": "3",
+          "at": [
+            156.19,
+            89.89999999999999
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PD2",
+          "pin": "Pin_3"
+        },
+        {
+          "number": "4",
+          "at": [
+            156.19,
+            92.44
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PD0",
+          "pin": "Pin_4"
+        },
+        {
+          "number": "5",
+          "at": [
+            156.19,
+            94.97999999999999
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PA15",
+          "pin": "Pin_5"
+        },
+        {
+          "number": "6",
+          "at": [
+            156.19,
+            97.52
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PA10",
+          "pin": "Pin_6"
+        },
+        {
+          "number": "7",
+          "at": [
+            156.19,
+            100.05999999999999
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "unconnected-(J2-Pin_7-Pad7)",
+          "pin": "Pin_7"
+        },
+        {
+          "number": "8",
+          "at": [
+            156.19,
+            102.6
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "GND",
+          "pin": "Pin_8"
+        },
+        {
+          "number": "9",
+          "at": [
+            156.19,
+            105.13999999999999
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "SWCLK",
+          "pin": "Pin_9"
+        },
+        {
+          "number": "10",
+          "at": [
+            156.19,
+            107.67999999999999
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "SWDIO",
+          "pin": "Pin_10"
+        },
+        {
+          "number": "11",
+          "at": [
+            156.19,
+            110.22
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "+3V3_DCDC",
+          "pin": "Pin_11"
+        },
+        {
+          "number": "12",
+          "at": [
+            156.19,
+            112.75999999999999
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "+VDDIO2",
+          "pin": "Pin_12"
+        },
+        {
+          "number": "13",
+          "at": [
+            156.19,
+            115.3
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "GND",
+          "pin": "Pin_13"
+        },
+        {
+          "number": "14",
+          "at": [
+            156.19,
+            117.84
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PA9",
+          "pin": "Pin_14"
+        },
+        {
+          "number": "15",
+          "at": [
+            156.19,
+            120.38
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PA8",
+          "pin": "Pin_15"
+        },
+        {
+          "number": "16",
+          "at": [
+            156.19,
+            122.91999999999999
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PB15",
+          "pin": "Pin_16"
+        },
+        {
+          "number": "17",
+          "at": [
+            156.19,
+            125.46
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PB13",
+          "pin": "Pin_17"
+        },
+        {
+          "number": "18",
+          "at": [
+            156.19,
+            128.0
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PB12",
+          "pin": "Pin_18"
+        },
+        {
+          "number": "19",
+          "at": [
+            156.19,
+            130.54
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PB11",
+          "pin": "Pin_19"
+        },
+        {
+          "number": "20",
+          "at": [
+            156.19,
+            133.07999999999998
+          ],
+          "size": [
+            1.7,
+            1.7
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "PB1",
+          "pin": "Pin_20"
+        }
+      ]
+    },
+    "J3": {
+      "value": "USB_C_Receptacle_USB2.0",
+      "side": "F",
+      "at": [
+        147.3,
+        87.125
+      ],
+      "rot": 180.0,
+      "pads": [
+        {
+          "number": "",
+          "at": [
+            150.19,
+            89.73
+          ],
+          "size": [
+            0.65,
+            0.65
+          ],
+          "shape": "circle",
+          "through": true,
+          "net": null
+        },
+        {
+          "number": "",
+          "at": [
+            144.41000000000003,
+            89.73
+          ],
+          "size": [
+            0.65,
+            0.65
+          ],
+          "shape": "circle",
+          "through": true,
+          "net": null
+        },
+        {
+          "number": "A1",
+          "at": [
+            150.5,
+            90.805
+          ],
+          "size": [
+            0.6,
+            1.15
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "GND"
+        },
+        {
+          "number": "A4",
+          "at": [
+            149.70000000000002,
+            90.805
+          ],
+          "size": [
+            0.6,
+            1.15
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "+VIN_USB",
+          "pin": "VBUS"
+        },
+        {
+          "number": "A5",
+          "at": [
+            148.55,
+            90.805
+          ],
+          "size": [
+            0.3,
+            1.15
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "CC1",
+          "pin": "CC1"
+        },
+        {
+          "number": "A6",
+          "at": [
+            147.55,
+            90.805
+          ],
+          "size": [
+            0.3,
+            1.15
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "USB_P",
+          "pin": "D+"
+        },
+        {
+          "number": "A7",
+          "at": [
+            147.05,
+            90.805
+          ],
+          "size": [
+            0.3,
+            1.15
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "USB_N",
+          "pin": "D-"
+        },
+        {
+          "number": "A8",
+          "at": [
+            146.05,
+            90.805
+          ],
+          "size": [
+            0.3,
+            1.15
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "SBU1",
+          "pin": "SBU1"
+        },
+        {
+          "number": "A9",
+          "at": [
+            144.9,
+            90.805
+          ],
+          "size": [
+            0.6,
+            1.15
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "+VIN_USB",
+          "pin": "VBUS"
+        },
+        {
+          "number": "A12",
+          "at": [
+            144.10000000000002,
+            90.805
+          ],
+          "size": [
+            0.6,
+            1.15
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "GND"
+        },
+        {
+          "number": "B1",
+          "at": [
+            144.10000000000002,
+            90.805
+          ],
+          "size": [
+            0.6,
+            1.15
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "GND"
+        },
+        {
+          "number": "B4",
+          "at": [
+            144.9,
+            90.805
+          ],
+          "size": [
+            0.6,
+            1.15
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "+VIN_USB",
+          "pin": "VBUS"
+        },
+        {
+          "number": "B5",
+          "at": [
+            145.55,
+            90.805
+          ],
+          "size": [
+            0.3,
+            1.15
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "CC2",
+          "pin": "CC2"
+        },
+        {
+          "number": "B6",
+          "at": [
+            146.55,
+            90.805
+          ],
+          "size": [
+            0.3,
+            1.15
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "USB_P",
+          "pin": "D+"
+        },
+        {
+          "number": "B7",
+          "at": [
+            148.05,
+            90.805
+          ],
+          "size": [
+            0.3,
+            1.15
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "USB_N",
+          "pin": "D-"
+        },
+        {
+          "number": "B8",
+          "at": [
+            149.05,
+            90.805
+          ],
+          "size": [
+            0.3,
+            1.15
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "SBU2",
+          "pin": "SBU2"
+        },
+        {
+          "number": "B9",
+          "at": [
+            149.70000000000002,
+            90.805
+          ],
+          "size": [
+            0.6,
+            1.15
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "+VIN_USB",
+          "pin": "VBUS"
+        },
+        {
+          "number": "B12",
+          "at": [
+            150.5,
+            90.805
+          ],
+          "size": [
+            0.6,
+            1.15
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "GND"
+        },
+        {
+          "number": "S1",
+          "at": [
+            151.62,
+            90.23
+          ],
+          "size": [
+            1.0,
+            2.1
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "GND",
+          "pin": "SHIELD"
+        },
+        {
+          "number": "S1",
+          "at": [
+            151.62,
+            86.05
+          ],
+          "size": [
+            1.0,
+            1.8
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "GND",
+          "pin": "SHIELD"
+        },
+        {
+          "number": "S1",
+          "at": [
+            142.98000000000002,
+            90.23
+          ],
+          "size": [
+            1.0,
+            2.1
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "GND",
+          "pin": "SHIELD"
+        },
+        {
+          "number": "S1",
+          "at": [
+            142.98000000000002,
+            86.05
+          ],
+          "size": [
+            1.0,
+            1.8
+          ],
+          "shape": "rect",
+          "through": true,
+          "net": "GND",
+          "pin": "SHIELD"
+        }
+      ]
+    },
+    "J4": {
+      "value": "Pico-Lock 4P",
+      "side": "F",
+      "at": [
+        147.3,
+        130.85
+      ],
+      "rot": 0.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            145.05,
+            128.055
+          ],
+          "size": [
+            0.6,
+            1.0
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "+VCAN_J",
+          "pin": "Pin_1"
+        },
+        {
+          "number": "2",
+          "at": [
+            146.55,
+            128.055
+          ],
+          "size": [
+            0.6,
+            1.0
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "CANH",
+          "pin": "Pin_2"
+        },
+        {
+          "number": "3",
+          "at": [
+            148.05,
+            128.055
+          ],
+          "size": [
+            0.6,
+            1.0
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "CANL",
+          "pin": "Pin_3"
+        },
+        {
+          "number": "4",
+          "at": [
+            149.55,
+            128.055
+          ],
+          "size": [
+            0.6,
+            1.0
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "Pin_4"
+        },
+        {
+          "number": "MP",
+          "at": [
+            142.44500000000002,
+            133.245
+          ],
+          "size": [
+            1.25,
+            1.8
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "MountPin"
+        },
+        {
+          "number": "MP",
+          "at": [
+            152.155,
+            133.245
+          ],
+          "size": [
+            1.25,
+            1.8
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "MountPin"
+        }
+      ]
+    },
+    "J5": {
+      "value": "Pico-Lock 4P",
+      "side": "B",
+      "at": [
+        147.3,
+        130.85
+      ],
+      "rot": 180.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            149.55,
+            128.055
+          ],
+          "size": [
+            0.6,
+            1.0
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "+VCAN_J",
+          "pin": "Pin_1"
+        },
+        {
+          "number": "2",
+          "at": [
+            148.05,
+            128.055
+          ],
+          "size": [
+            0.6,
+            1.0
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "CANH",
+          "pin": "Pin_2"
+        },
+        {
+          "number": "3",
+          "at": [
+            146.55,
+            128.055
+          ],
+          "size": [
+            0.6,
+            1.0
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "CANL",
+          "pin": "Pin_3"
+        },
+        {
+          "number": "4",
+          "at": [
+            145.05,
+            128.055
+          ],
+          "size": [
+            0.6,
+            1.0
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "Pin_4"
+        },
+        {
+          "number": "MP",
+          "at": [
+            152.155,
+            133.245
+          ],
+          "size": [
+            1.25,
+            1.8
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "MountPin"
+        },
+        {
+          "number": "MP",
+          "at": [
+            142.44500000000002,
+            133.245
+          ],
+          "size": [
+            1.25,
+            1.8
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "MountPin"
+        }
+      ]
+    },
+    "JP2": {
+      "value": "Jumper (Short)",
+      "side": "F",
+      "at": [
+        140.6,
+        107.4
+      ],
+      "rot": -90.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            140.6,
+            106.75
+          ],
+          "size": [
+            0.5,
+            1.0
+          ],
+          "shape": "other",
+          "through": false,
+          "net": "+3V3_DCDC",
+          "pin": "A"
+        },
+        {
+          "number": "2",
+          "at": [
+            140.6,
+            108.05000000000001
+          ],
+          "size": [
+            0.5,
+            1.0
+          ],
+          "shape": "other",
+          "through": false,
+          "net": "VBAT",
+          "pin": "B"
+        }
+      ]
+    },
+    "JP3": {
+      "value": "Jumper (Short)",
+      "side": "F",
+      "at": [
+        154.1,
+        110.5
+      ],
+      "rot": 90.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            154.1,
+            111.15
+          ],
+          "size": [
+            0.5,
+            1.0
+          ],
+          "shape": "other",
+          "through": false,
+          "net": "+VDDIO2",
+          "pin": "A"
+        },
+        {
+          "number": "2",
+          "at": [
+            154.1,
+            109.85
+          ],
+          "size": [
+            0.5,
+            1.0
+          ],
+          "shape": "other",
+          "through": false,
+          "net": "+3V3_DCDC",
+          "pin": "B"
+        }
+      ]
+    },
+    "U1": {
+      "value": "STM32G0B1CETxN",
+      "side": "F",
+      "at": [
+        147.3,
+        107.4
+      ],
+      "rot": -45.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            146.301211671574,
+            102.51212437504799
+          ],
+          "size": [
+            1.475,
+            0.3
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "CAN_STBY",
+          "pin": "PC13"
+        },
+        {
+          "number": "2",
+          "at": [
+            145.94765828098076,
+            102.86567776564127
+          ],
+          "size": [
+            1.475,
+            0.3
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "LF_OSC_IN",
+          "pin": "PC14"
+        },
+        {
+          "number": "3",
+          "at": [
+            145.59410489038748,
+            103.21923115623454
+          ],
+          "size": [
+            1.475,
+            0.3
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "LF_OSC_OUT",
+          "pin": "PC15"
+        },
+        {
+          "number": "4",
+          "at": [
+            145.24055079268743,
+            103.5727852539346
+          ],
+          "size": [
+            1.475,
+            0.3
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "VBAT",
+          "pin": "VBAT"
+        },
+        {
+          "number": "5",
+          "at": [
+            144.88699810920093,
+            103.92633793742108
+          ],
+          "size": [
+            1.475,
+            0.3
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "Net-(U1-VREF+)",
+          "pin": "VREF+"
+        },
+        {
+          "number": "6",
+          "at": [
+            144.53344471860765,
+            104.27989132801436
+          ],
+          "size": [
+            1.475,
+            0.3
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "+3V3_DCDC",
+          "pin": "VDD"
+        },
+        {
+          "number": "7",
+          "at": [
+            144.17989132801438,
+            104.63344471860763
+          ],
+          "size": [
+            1.475,
+            0.3
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "VSS"
+        },
+        {
+          "number": "8",
+          "at": [
+            143.8263379374211,
+            104.98699810920091
+          ],
+          "size": [
+            1.475,
+            0.3
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "HF_OSC_IN",
+          "pin": "PF0"
+        },
+        {
+          "number": "9",
+          "at": [
+            143.4727852539346,
+            105.3405507926874
+          ],
+          "size": [
+            1.475,
+            0.3
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "HF_OSC_OUT",
+          "pin": "PF1"
+        },
+        {
+          "number": "10",
+          "at": [
+            143.11923115623455,
+            105.69410489038745
+          ],
+          "size": [
+            1.475,
+            0.3
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PF2_NRST",
+          "pin": "PF2"
+        },
+        {
+          "number": "11",
+          "at": [
+            142.76567776564127,
+            106.04765828098073
+          ],
+          "size": [
+            1.475,
+            0.3
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PA0",
+          "pin": "PA0"
+        },
+        {
+          "number": "12",
+          "at": [
+            142.41212437504802,
+            106.401211671574
+          ],
+          "size": [
+            1.475,
+            0.3
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PA1",
+          "pin": "PA1"
+        },
+        {
+          "number": "13",
+          "at": [
+            142.41212437504802,
+            108.39878832842601
+          ],
+          "size": [
+            0.3,
+            1.475
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PA2",
+          "pin": "PA2"
+        },
+        {
+          "number": "14",
+          "at": [
+            142.76567776564127,
+            108.75234171901928
+          ],
+          "size": [
+            0.3,
+            1.475
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PA3",
+          "pin": "PA3"
+        },
+        {
+          "number": "15",
+          "at": [
+            143.11923115623455,
+            109.10589510961256
+          ],
+          "size": [
+            0.3,
+            1.475
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PA4",
+          "pin": "PA4"
+        },
+        {
+          "number": "16",
+          "at": [
+            143.4727852539346,
+            109.45944920731262
+          ],
+          "size": [
+            0.3,
+            1.475
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PA5",
+          "pin": "PA5"
+        },
+        {
+          "number": "17",
+          "at": [
+            143.8263379374211,
+            109.8130018907991
+          ],
+          "size": [
+            0.3,
+            1.475
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PA6",
+          "pin": "PA6"
+        },
+        {
+          "number": "18",
+          "at": [
+            144.17989132801438,
+            110.16655528139238
+          ],
+          "size": [
+            0.3,
+            1.475
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PA7",
+          "pin": "PA7"
+        },
+        {
+          "number": "19",
+          "at": [
+            144.53344471860765,
+            110.52010867198565
+          ],
+          "size": [
+            0.3,
+            1.475
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PB0",
+          "pin": "PB0"
+        },
+        {
+          "number": "20",
+          "at": [
+            144.88699810920093,
+            110.87366206257893
+          ],
+          "size": [
+            0.3,
+            1.475
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PB1",
+          "pin": "PB1"
+        },
+        {
+          "number": "21",
+          "at": [
+            145.24055079268743,
+            111.22721474606541
+          ],
+          "size": [
+            0.3,
+            1.475
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "USB_VDIV",
+          "pin": "PB2"
+        },
+        {
+          "number": "22",
+          "at": [
+            145.59410489038748,
+            111.58076884376547
+          ],
+          "size": [
+            0.3,
+            1.475
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "CAN_VDIV",
+          "pin": "PB10"
+        },
+        {
+          "number": "23",
+          "at": [
+            145.94765828098076,
+            111.93432223435875
+          ],
+          "size": [
+            0.3,
+            1.475
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PB11",
+          "pin": "PB11"
+        },
+        {
+          "number": "24",
+          "at": [
+            146.301211671574,
+            112.28787562495202
+          ],
+          "size": [
+            0.3,
+            1.475
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PB12",
+          "pin": "PB12"
+        },
+        {
+          "number": "25",
+          "at": [
+            148.298788328426,
+            112.28787562495202
+          ],
+          "size": [
+            1.475,
+            0.3
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PB13",
+          "pin": "PB13"
+        },
+        {
+          "number": "26",
+          "at": [
+            148.65234171901926,
+            111.93432223435875
+          ],
+          "size": [
+            1.475,
+            0.3
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "LED",
+          "pin": "PB14"
+        },
+        {
+          "number": "27",
+          "at": [
+            149.00589510961254,
+            111.58076884376547
+          ],
+          "size": [
+            1.475,
+            0.3
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PB15",
+          "pin": "PB15"
+        },
+        {
+          "number": "28",
+          "at": [
+            149.3594492073126,
+            111.22721474606541
+          ],
+          "size": [
+            1.475,
+            0.3
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PA8",
+          "pin": "PA8"
+        },
+        {
+          "number": "29",
+          "at": [
+            149.7130018907991,
+            110.87366206257893
+          ],
+          "size": [
+            1.475,
+            0.3
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PA9",
+          "pin": "PA9"
+        },
+        {
+          "number": "30",
+          "at": [
+            150.06655528139237,
+            110.52010867198565
+          ],
+          "size": [
+            1.475,
+            0.3
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "VSS"
+        },
+        {
+          "number": "31",
+          "at": [
+            150.42010867198564,
+            110.16655528139238
+          ],
+          "size": [
+            1.475,
+            0.3
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "+VDDIO2",
+          "pin": "VDDIO2"
+        },
+        {
+          "number": "32",
+          "at": [
+            150.77366206257892,
+            109.8130018907991
+          ],
+          "size": [
+            1.475,
+            0.3
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PA10",
+          "pin": "PA10"
+        },
+        {
+          "number": "33",
+          "at": [
+            151.12721474606542,
+            109.45944920731262
+          ],
+          "size": [
+            1.475,
+            0.3
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "USB_N",
+          "pin": "PA11"
+        },
+        {
+          "number": "34",
+          "at": [
+            151.48076884376547,
+            109.10589510961256
+          ],
+          "size": [
+            1.475,
+            0.3
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "USB_P",
+          "pin": "PA12"
+        },
+        {
+          "number": "35",
+          "at": [
+            151.83432223435875,
+            108.75234171901928
+          ],
+          "size": [
+            1.475,
+            0.3
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "SWDIO",
+          "pin": "PA13"
+        },
+        {
+          "number": "36",
+          "at": [
+            152.187875624952,
+            108.39878832842601
+          ],
+          "size": [
+            1.475,
+            0.3
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "SWCLK",
+          "pin": "PA14"
+        },
+        {
+          "number": "37",
+          "at": [
+            152.187875624952,
+            106.401211671574
+          ],
+          "size": [
+            0.3,
+            1.475
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PA15",
+          "pin": "PA15"
+        },
+        {
+          "number": "38",
+          "at": [
+            151.83432223435875,
+            106.04765828098073
+          ],
+          "size": [
+            0.3,
+            1.475
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PD0",
+          "pin": "PD0"
+        },
+        {
+          "number": "39",
+          "at": [
+            151.48076884376547,
+            105.69410489038745
+          ],
+          "size": [
+            0.3,
+            1.475
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "FDCAN_TX",
+          "pin": "PD1"
+        },
+        {
+          "number": "40",
+          "at": [
+            151.12721474606542,
+            105.3405507926874
+          ],
+          "size": [
+            0.3,
+            1.475
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PD2",
+          "pin": "PD2"
+        },
+        {
+          "number": "41",
+          "at": [
+            150.77366206257892,
+            104.98699810920091
+          ],
+          "size": [
+            0.3,
+            1.475
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PD3",
+          "pin": "PD3"
+        },
+        {
+          "number": "42",
+          "at": [
+            150.42010867198564,
+            104.63344471860763
+          ],
+          "size": [
+            0.3,
+            1.475
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PB3",
+          "pin": "PB3"
+        },
+        {
+          "number": "43",
+          "at": [
+            150.06655528139237,
+            104.27989132801436
+          ],
+          "size": [
+            0.3,
+            1.475
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PB4",
+          "pin": "PB4"
+        },
+        {
+          "number": "44",
+          "at": [
+            149.7130018907991,
+            103.92633793742108
+          ],
+          "size": [
+            0.3,
+            1.475
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PB5",
+          "pin": "PB5"
+        },
+        {
+          "number": "45",
+          "at": [
+            149.3594492073126,
+            103.5727852539346
+          ],
+          "size": [
+            0.3,
+            1.475
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PB6",
+          "pin": "PB6"
+        },
+        {
+          "number": "46",
+          "at": [
+            149.00589510961254,
+            103.21923115623454
+          ],
+          "size": [
+            0.3,
+            1.475
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PB7",
+          "pin": "PB7"
+        },
+        {
+          "number": "47",
+          "at": [
+            148.65234171901926,
+            102.86567776564127
+          ],
+          "size": [
+            0.3,
+            1.475
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "FDCAN_RX",
+          "pin": "PB8"
+        },
+        {
+          "number": "48",
+          "at": [
+            148.298788328426,
+            102.51212437504799
+          ],
+          "size": [
+            0.3,
+            1.475
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "PB9",
+          "pin": "PB9"
+        }
+      ]
+    },
+    "U2": {
+      "value": "LV14360SDDAR",
+      "side": "F",
+      "at": [
+        150.5,
+        117.9
+      ],
+      "rot": 90.0,
+      "pads": [
+        {
+          "number": "",
+          "at": [
+            149.65,
+            118.58000000000001
+          ],
+          "size": [
+            1.42,
+            1.13
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": null
+        },
+        {
+          "number": "",
+          "at": [
+            151.35,
+            118.58000000000001
+          ],
+          "size": [
+            1.42,
+            1.13
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": null
+        },
+        {
+          "number": "",
+          "at": [
+            150.5,
+            117.9
+          ],
+          "size": [
+            3.4,
+            2.71
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": null
+        },
+        {
+          "number": "",
+          "at": [
+            149.65,
+            117.22
+          ],
+          "size": [
+            1.42,
+            1.13
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": null
+        },
+        {
+          "number": "",
+          "at": [
+            151.35,
+            117.22
+          ],
+          "size": [
+            1.42,
+            1.13
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": null
+        },
+        {
+          "number": "1",
+          "at": [
+            148.595,
+            120.60000000000001
+          ],
+          "size": [
+            0.6,
+            1.55
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "LV_BOOT",
+          "pin": "BOOT"
+        },
+        {
+          "number": "2",
+          "at": [
+            149.865,
+            120.60000000000001
+          ],
+          "size": [
+            0.6,
+            1.55
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "+VIN_CAN",
+          "pin": "VIN"
+        },
+        {
+          "number": "3",
+          "at": [
+            151.135,
+            120.60000000000001
+          ],
+          "size": [
+            0.6,
+            1.55
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "LV_EN",
+          "pin": "EN"
+        },
+        {
+          "number": "4",
+          "at": [
+            152.405,
+            120.60000000000001
+          ],
+          "size": [
+            0.6,
+            1.55
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "LV_RT",
+          "pin": "RT"
+        },
+        {
+          "number": "5",
+          "at": [
+            152.405,
+            115.2
+          ],
+          "size": [
+            0.6,
+            1.55
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "LV_FB",
+          "pin": "FB"
+        },
+        {
+          "number": "6",
+          "at": [
+            151.135,
+            115.2
+          ],
+          "size": [
+            0.6,
+            1.55
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "LV_SS",
+          "pin": "SS"
+        },
+        {
+          "number": "7",
+          "at": [
+            149.865,
+            115.2
+          ],
+          "size": [
+            0.6,
+            1.55
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "GND"
+        },
+        {
+          "number": "8",
+          "at": [
+            148.595,
+            115.2
+          ],
+          "size": [
+            0.6,
+            1.55
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "LV_SW",
+          "pin": "SW"
+        },
+        {
+          "number": "9",
+          "at": [
+            150.5,
+            117.9
+          ],
+          "size": [
+            4.9,
+            2.95
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "EPAD_GND"
+        }
+      ]
+    },
+    "U3": {
+      "value": "RT5760",
+      "side": "B",
+      "at": [
+        152.6,
+        112.3
+      ],
+      "rot": 90.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            153.1,
+            113.05
+          ],
+          "size": [
+            0.34,
+            0.7
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "3V3_FB",
+          "pin": "FB"
+        },
+        {
+          "number": "2",
+          "at": [
+            152.6,
+            113.05
+          ],
+          "size": [
+            0.34,
+            0.7
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "GND"
+        },
+        {
+          "number": "3",
+          "at": [
+            152.1,
+            113.05
+          ],
+          "size": [
+            0.34,
+            0.7
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "+5V0_DCDC",
+          "pin": "VIN"
+        },
+        {
+          "number": "4",
+          "at": [
+            152.1,
+            111.55
+          ],
+          "size": [
+            0.34,
+            0.7
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "3V3_SW",
+          "pin": "SW"
+        },
+        {
+          "number": "5",
+          "at": [
+            152.6,
+            111.55
+          ],
+          "size": [
+            0.34,
+            0.7
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "+5V0_DCDC",
+          "pin": "EN"
+        },
+        {
+          "number": "6",
+          "at": [
+            153.1,
+            111.55
+          ],
+          "size": [
+            0.34,
+            0.7
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "unconnected-(U3-PG-Pad6)",
+          "pin": "PG"
+        }
+      ]
+    },
+    "U4": {
+      "value": "AOZ1376DI-02",
+      "side": "B",
+      "at": [
+        146.5,
+        85.65
+      ],
+      "rot": 0.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            145.18,
+            86.8375
+          ],
+          "size": [
+            0.45,
+            0.375
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "+5V0_DCDC",
+          "pin": "VOUT"
+        },
+        {
+          "number": "2",
+          "at": [
+            145.18,
+            86.4625
+          ],
+          "size": [
+            0.45,
+            0.375
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "+5V0_DCDC",
+          "pin": "VOUT"
+        },
+        {
+          "number": "3",
+          "at": [
+            145.18,
+            85.9
+          ],
+          "size": [
+            0.45,
+            0.25
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "AOZ_POVP",
+          "pin": "POVP"
+        },
+        {
+          "number": "4",
+          "at": [
+            145.18,
+            85.4
+          ],
+          "size": [
+            0.45,
+            0.25
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "VUSB_FLTB",
+          "pin": "FLTB"
+        },
+        {
+          "number": "5",
+          "at": [
+            145.18,
+            84.9
+          ],
+          "size": [
+            0.45,
+            0.25
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "AOZ_ENB",
+          "pin": "ENB"
+        },
+        {
+          "number": "6",
+          "at": [
+            145.18,
+            84.4
+          ],
+          "size": [
+            0.45,
+            0.25
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "GND"
+        },
+        {
+          "number": "7",
+          "at": [
+            147.82,
+            84.4
+          ],
+          "size": [
+            0.45,
+            0.25
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "AOZ_SS",
+          "pin": "SS"
+        },
+        {
+          "number": "8",
+          "at": [
+            147.82,
+            84.9
+          ],
+          "size": [
+            0.45,
+            0.25
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "unconnected-(U4-NC-Pad8)",
+          "pin": "NC"
+        },
+        {
+          "number": "9",
+          "at": [
+            147.82,
+            85.4
+          ],
+          "size": [
+            0.45,
+            0.25
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "unconnected-(U4-NC-Pad9)",
+          "pin": "NC"
+        },
+        {
+          "number": "10",
+          "at": [
+            147.82,
+            85.9
+          ],
+          "size": [
+            0.45,
+            0.25
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "unconnected-(U4-NC-Pad10)",
+          "pin": "NC"
+        },
+        {
+          "number": "11",
+          "at": [
+            147.82,
+            86.4625
+          ],
+          "size": [
+            0.45,
+            0.375
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "+VIN_USB",
+          "pin": "VIN"
+        },
+        {
+          "number": "12",
+          "at": [
+            147.82,
+            86.8375
+          ],
+          "size": [
+            0.45,
+            0.375
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "+VIN_USB",
+          "pin": "VIN"
+        },
+        {
+          "number": "13",
+          "at": [
+            146.5,
+            85.65
+          ],
+          "size": [
+            1.5,
+            2.5
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "EP_GND"
+        }
+      ]
+    },
+    "U5": {
+      "value": "LMV358A",
+      "side": "B",
+      "at": [
+        145.4,
+        99.2
+      ],
+      "rot": 180.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            147.55,
+            98.22500000000001
+          ],
+          "size": [
+            1.1,
+            0.4
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "Net-(R23-Pad2)"
+        },
+        {
+          "number": "2",
+          "at": [
+            147.55,
+            98.875
+          ],
+          "size": [
+            1.1,
+            0.4
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "Net-(U5A--)",
+          "pin": "-"
+        },
+        {
+          "number": "3",
+          "at": [
+            147.55,
+            99.525
+          ],
+          "size": [
+            1.1,
+            0.4
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "Net-(U5A-+)",
+          "pin": "+"
+        },
+        {
+          "number": "4",
+          "at": [
+            147.55,
+            100.175
+          ],
+          "size": [
+            1.1,
+            0.4
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "V-"
+        },
+        {
+          "number": "5",
+          "at": [
+            143.25,
+            100.175
+          ],
+          "size": [
+            1.1,
+            0.4
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "Net-(U5B-+)",
+          "pin": "+"
+        },
+        {
+          "number": "6",
+          "at": [
+            143.25,
+            99.525
+          ],
+          "size": [
+            1.1,
+            0.4
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "Net-(U5B--)",
+          "pin": "-"
+        },
+        {
+          "number": "7",
+          "at": [
+            143.25,
+            98.875
+          ],
+          "size": [
+            1.1,
+            0.4
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "Net-(R24-Pad2)"
+        },
+        {
+          "number": "8",
+          "at": [
+            143.25,
+            98.22500000000001
+          ],
+          "size": [
+            1.1,
+            0.4
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "+3V3_DCDC",
+          "pin": "V+"
+        }
+      ]
+    },
+    "U6": {
+      "value": "74LVC1G08",
+      "side": "B",
+      "at": [
+        145.1,
+        95.4
+      ],
+      "rot": 0.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            143.9625,
+            96.35000000000001
+          ],
+          "size": [
+            1.325,
+            0.6
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "Net-(R23-Pad2)"
+        },
+        {
+          "number": "2",
+          "at": [
+            143.9625,
+            95.4
+          ],
+          "size": [
+            1.325,
+            0.6
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "Net-(R24-Pad2)"
+        },
+        {
+          "number": "3",
+          "at": [
+            143.9625,
+            94.45
+          ],
+          "size": [
+            1.325,
+            0.6
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "GND"
+        },
+        {
+          "number": "4",
+          "at": [
+            146.23749999999998,
+            94.45
+          ],
+          "size": [
+            1.325,
+            0.6
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "Net-(R25-Pad1)"
+        },
+        {
+          "number": "5",
+          "at": [
+            146.23749999999998,
+            96.35000000000001
+          ],
+          "size": [
+            1.325,
+            0.6
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "+3V3_DCDC",
+          "pin": "VCC"
+        }
+      ]
+    },
+    "U7": {
+      "value": "TS3A5223RSWR",
+      "side": "B",
+      "at": [
+        153.2,
+        102.3
+      ],
+      "rot": -90.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            153.0,
+            101.750001
+          ],
+          "size": [
+            0.2,
+            0.700001
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "+3V3_DCDC",
+          "pin": "VCC"
+        },
+        {
+          "number": "2",
+          "at": [
+            153.39999999999998,
+            101.700001
+          ],
+          "size": [
+            0.2,
+            0.599999
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "SBU1_PR",
+          "pin": "NO1"
+        },
+        {
+          "number": "3",
+          "at": [
+            154.000001,
+            101.899998
+          ],
+          "size": [
+            0.599999,
+            0.2
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "SWCLK",
+          "pin": "COM1"
+        },
+        {
+          "number": "4",
+          "at": [
+            154.000001,
+            102.3
+          ],
+          "size": [
+            0.599999,
+            0.2
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "SWD_SEL",
+          "pin": "SEL1"
+        },
+        {
+          "number": "5",
+          "at": [
+            154.000001,
+            102.69999899999999
+          ],
+          "size": [
+            0.599999,
+            0.2
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "unconnected-(U7-NC1-Pad5)",
+          "pin": "NC1"
+        },
+        {
+          "number": "6",
+          "at": [
+            153.39999999999998,
+            102.899999
+          ],
+          "size": [
+            0.2,
+            0.599999
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "GND"
+        },
+        {
+          "number": "7",
+          "at": [
+            153.0,
+            102.899999
+          ],
+          "size": [
+            0.2,
+            0.599999
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "unconnected-(U7-NC2-Pad7)",
+          "pin": "NC2"
+        },
+        {
+          "number": "8",
+          "at": [
+            152.39999899999998,
+            102.69999899999999
+          ],
+          "size": [
+            0.599999,
+            0.2
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "SWD_SEL",
+          "pin": "SEL2"
+        },
+        {
+          "number": "9",
+          "at": [
+            152.39999899999998,
+            102.3
+          ],
+          "size": [
+            0.599999,
+            0.2
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "SWDIO",
+          "pin": "COM2"
+        },
+        {
+          "number": "10",
+          "at": [
+            152.39999899999998,
+            101.899998
+          ],
+          "size": [
+            0.599999,
+            0.2
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "SBU2_PR",
+          "pin": "NO2"
+        }
+      ]
+    },
+    "U8": {
+      "value": "TCAN1044VDDF",
+      "side": "B",
+      "at": [
+        151.0,
+        121.0
+      ],
+      "rot": -90.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            150.025,
+            119.7
+          ],
+          "size": [
+            0.45,
+            1.05
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "FDCAN_TX",
+          "pin": "TXD"
+        },
+        {
+          "number": "2",
+          "at": [
+            150.675,
+            119.7
+          ],
+          "size": [
+            0.45,
+            1.05
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "GND"
+        },
+        {
+          "number": "3",
+          "at": [
+            151.325,
+            119.7
+          ],
+          "size": [
+            0.45,
+            1.05
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "+5V0_DCDC",
+          "pin": "VCC"
+        },
+        {
+          "number": "4",
+          "at": [
+            151.975,
+            119.7
+          ],
+          "size": [
+            0.45,
+            1.05
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "FDCAN_RX",
+          "pin": "RXD"
+        },
+        {
+          "number": "5",
+          "at": [
+            151.975,
+            122.3
+          ],
+          "size": [
+            0.45,
+            1.05
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "+3V3_DCDC",
+          "pin": "VIO"
+        },
+        {
+          "number": "6",
+          "at": [
+            151.325,
+            122.3
+          ],
+          "size": [
+            0.45,
+            1.05
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "CANL",
+          "pin": "CANL"
+        },
+        {
+          "number": "7",
+          "at": [
+            150.675,
+            122.3
+          ],
+          "size": [
+            0.45,
+            1.05
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "CANH",
+          "pin": "CANH"
+        },
+        {
+          "number": "8",
+          "at": [
+            150.025,
+            122.3
+          ],
+          "size": [
+            0.45,
+            1.05
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "CAN_STBY",
+          "pin": "STB"
+        }
+      ]
+    },
+    "Y1": {
+      "value": "32.768kHz",
+      "side": "F",
+      "at": [
+        148.8,
+        99.8
+      ],
+      "rot": 180.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            150.05,
+            99.8
+          ],
+          "size": [
+            1.1,
+            1.9
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "LF_OSC_IN",
+          "pin": "1"
+        },
+        {
+          "number": "2",
+          "at": [
+            147.55,
+            99.8
+          ],
+          "size": [
+            1.1,
+            1.9
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "LF_OSC_OUT",
+          "pin": "2"
+        }
+      ]
+    },
+    "Y2": {
+      "value": "12MHz",
+      "side": "F",
+      "at": [
+        142.1,
+        100.4
+      ],
+      "rot": 180.0,
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            143.2,
+            99.55000000000001
+          ],
+          "size": [
+            1.4,
+            1.2
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "HF_OSC_IN",
+          "pin": "1"
+        },
+        {
+          "number": "2",
+          "at": [
+            141.0,
+            99.55000000000001
+          ],
+          "size": [
+            1.4,
+            1.2
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "2"
+        },
+        {
+          "number": "3",
+          "at": [
+            141.0,
+            101.25
+          ],
+          "size": [
+            1.4,
+            1.2
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "HF_OSC_OUT",
+          "pin": "3"
+        },
+        {
+          "number": "4",
+          "at": [
+            143.2,
+            101.25
+          ],
+          "size": [
+            1.4,
+            1.2
+          ],
+          "shape": "rect",
+          "through": false,
+          "net": "GND",
+          "pin": "4"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+[package]
+name = "cannify_micro_cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "cannify: command line for the CANnify Micro firmware, a thin layer over cannify_micro_client"
+
+[[bin]]
+name = "cannify"
+path = "src/main.rs"
+
+[dependencies]
+cannify_micro_client.workspace = true
+anstream.workspace = true
+anstyle.workspace = true
+anyhow.workspace = true
+clap.workspace = true
+clap_complete.workspace = true
+indicatif.workspace = true
+tokio.workspace = true
+# `--device` completion and `cannify devices` list the boards on USB; the same nusb the client connects through
+nusb = "0.2"

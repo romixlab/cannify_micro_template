@@ -1,0 +1,53 @@
+[package]
+name = "cannify_micro_api"
+version = "0.1.0"
+edition = "2024"
+description = "WireWeaver API of the cannify_micro firmware"
+
+[features]
+# owned (alloc) variants of the API types, for host-side users
+std = [
+    "wire_weaver/std",
+    "ww_board_info/std",
+    "ww_counters/std",
+    "ww_dfu/std",
+    "ww_firmware_info/std",
+    "ww_indication/std",
+    "ww_log/std",
+    "ww_pin_diag/std",
+    "ww_timebase/std",
+    "ww_uid/std",
+    "ww_user_info/std",
+]
+defmt = [
+    "wire_weaver/defmt",
+    "ww_firmware_info/defmt",
+    "ww_indication/defmt",
+    "ww_pin_diag/defmt",
+    "ww_timebase/defmt",
+    "ww_user_info/defmt",
+    "dep:defmt",
+]
+
+[dependencies]
+defmt = { version = "1.1", optional = true }
+wire_weaver = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
+# the device contract (`device`): stdlib traits generic host tools know
+# FirmwareInfo, LastReset; `std` reads every architecture's fault record
+ww_firmware_info = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false, features = ["cortex-m"] }
+ww_board_info = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
+ww_uid = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
+# UserInfo: the unit's name, kept in the firmware's settings store
+ww_user_info = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
+ww_counters = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
+ww_log = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
+ww_dfu = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
+# PinDiag: raw access to the free pins for pin tests (`ww pins tui`)
+ww_pin_diag = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
+# `leds` and `clock`: D14's indication, the clock a host steers onto UTC
+ww_indication = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
+ww_timebase = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
+
+[dev-dependencies]
+# the evolution check (tests/evolution.rs): this crate compared with its snapshots in api_snapshots/
+wire_weaver_evolution = { git = "https://github.com/vhrdtech/wire_weaver" }

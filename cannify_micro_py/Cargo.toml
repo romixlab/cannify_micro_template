@@ -1,0 +1,19 @@
+[package]
+name = "cannify_micro_py"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Python module for the CANnify Micro firmware, wrapping cannify_micro_client"
+publish = false # distributed as a Python wheel, see pyproject.toml
+
+[lib]
+name = "cannify_micro" # the Python module name
+crate-type = ["cdylib"]
+doc = false
+test = false # tested from Python (`just test-py`); a Rust test binary would need libpython at run time
+
+[dependencies]
+cannify_micro_client.workspace = true
+pyo3.workspace = true
+tokio.workspace = true

@@ -1,0 +1,51 @@
+# Host workspace: the API crate, the client library, the command line and the Python wrapper. The firmware
+# (firmware/) is a standalone crate for thumbv6m-none-eabi: build it from its own directory (or `just run`).
+[workspace]
+resolver = "3"
+members = ["cannify_micro_api", "cannify_micro_client", "cannify_micro_cli", "cannify_micro_py"]
+exclude = ["firmware"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+repository = "https://github.com/vhrdtech/cannify_micro_template"
+
+# just install: release, but incremental, so a rebuild after a small change is quick
+[profile.deploy]
+inherits = "release"
+incremental = true
+
+[workspace.dependencies]
+cannify_micro_api = { path = "cannify_micro_api", features = ["std"] }
+cannify_micro_client = { path = "cannify_micro_client" }
+# WireWeaver from git, the same source the firmware builds against (firmware/Cargo.toml)
+wire_weaver = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std"] }
+wire_weaver_client = { git = "https://github.com/vhrdtech/wire_weaver", features = ["usb"] }
+ww_firmware_info = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std"] }
+ww_user_info = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std"] }
+ww_board_info = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std"] }
+ww_counters = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std"] }
+ww_dfu = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std"] }
+ww_uid = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std"] }
+ww_log = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std"] }
+ww_indication = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std"] }
+ww_timebase = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std"] }
+ww_date_time = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std"] }
+ww_si = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std", "time"] }
+# counters, the stored log and the bug report decoded with the firmware's ELF, as `ww report` does
+ww_report = { git = "https://github.com/vhrdtech/wire_weaver" }
+cnt_core = "0.5" # finds the firmware's ELF by its build id, the same as ww_report
+defmt-decoder = "1.1" # the log, followed live
+ww_pin_diag = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std"] }
+ww_gpio = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std"] }
+# host crates
+anstream = "1"
+anstyle = "1"
+anyhow = "1"
+clap = { version = "4.5", features = ["derive", "env", "wrap_help"] }
+clap_complete = { version = "4.6", features = ["unstable-dynamic"] }
+indicatif = "0.18"
+pyo3 = "0.29"
+thiserror = "2"
+tokio = { version = "1", features = ["rt-multi-thread", "time", "macros", "signal"] }

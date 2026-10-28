@@ -1,0 +1,9 @@
+# Pin test of a bare B129A CANnify Micro (rev A, nothing on J1 / J2), for
+# `ww --api API pins test --plan docs/board/b129a_cannify-pins-test.toml` (README "Pins"). Every free pin
+# floats: the board has no pull on any of them and nothing between two of them (schematic). To be confirmed with
+# `--save` on a board.
+target = "pins"
+
+[[point]]
+names = ["PA*", "PB*", "PD*"]
+expect = "floating"
