@@ -4,12 +4,12 @@
   "template": {
     "repo": "https://github.com/romixlab/embedded_bedrock",
     "path": "firmware_template_skill",
-    "commit": "7e13605d2985cdb797eb486fafb23563f1a22bd9",
-    "commit_date": "2026-10-28T16:57:33Z",
+    "commit": "9ce6f827f8a352b14f01ddf77e8b7d355fd1c006",
+    "commit_date": "2026-10-29T04:22:48Z",
     "dirty": false,
     "version": "Unreleased"
   },
-  "generated": "2026-10-28T17:00:18+00:00",
+  "generated": "2026-10-29T04:22:49+00:00",
   "command": "bedrock_gen.py new cannify_micro --ww-api cannify_micro_api --board b129a_cannify",
   "answers": {
     "name": "cannify_micro",

@@ -9,7 +9,7 @@ exclude = ["firmware"]
 version = "0.1.0"
 edition = "2024"
 license = "MIT"
-repository = "https://github.com/vhrdtech/cannify_micro_template"
+repository = "https://github.com/romixlab/cannify_micro_template"
 
 # just install: release, but incremental, so a rebuild after a small change is quick
 [profile.deploy]
