@@ -170,6 +170,7 @@ mod server_impl {
         omit = [
             "device.firmware.BUILD_RECORD",
             "device.board.REWORKS",
+            "device.board.set_reworks",
             "device.label.notes",
             "device.counters.watch",
         ],

@@ -12,3 +12,8 @@ All notable changes to this project are documented here. The format follows
   `pins` (`ww_pin_diag::PinDiag`, `just pins`)), the `cannify_micro_api` API crate, the `cannify_micro_client`
   library, the `cannify` command line with live shell completion, the `cannify_micro` Python module, `just` recipes,
   CI, the API evolution check and `just rename`.
+
+### Changed
+
+- `device.board.set_reworks` (`ww_board_info` 0.3.0, STD-98) added to `omit` next to `device.board.REWORKS` in
+  `firmware/src/ww.rs`: reworks aren't served; keeps building once STD-98 lands on wire_weaver main.
