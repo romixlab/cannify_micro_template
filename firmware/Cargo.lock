@@ -232,7 +232,7 @@ dependencies = [
 
 [[package]]
 name = "cannify_micro_api"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = [
  "defmt 1.2.0",
  "wire_weaver",
