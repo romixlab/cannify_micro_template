@@ -82,7 +82,7 @@ flash: build-fw
 attach:
     probe-rs attach --chip {{chip}} --probe {{probe}} {{fw_dir}}/debug/cannify_micro
 
-# Build the `cannify` command line and install it on this PC (with tpm on PATH through tpm install, else cargo install)
+# Build the `cannify` command line and install it on this PC (through a local install manager if present on PATH, else cargo install)
 [unix]
 install:
     cargo build --profile deploy --locked -p cannify_micro_cli

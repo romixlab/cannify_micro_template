@@ -91,7 +91,7 @@ impl Cannify {
             })?;
         // A resume from the start comes as two runs, the stored backlog and the live log, interleaved: they are put
         // back into position order before decoding, so lines come once and in order. ww_report::log::read has the
-        // same two runs (wire_weaver P2401#24oct-1515): once it orders them, this follows through it instead
+        // same two runs: once it orders them, this follows through it instead
         let mut order = InOrder::default();
         let mut decoder = table.new_stream_decoder();
         loop {

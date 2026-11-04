@@ -8,7 +8,7 @@
 </p>
 
 A complete, working starting point for a [WireWeaver](https://github.com/vhrdtech/wire_weaver) device on the
-[B129A CANnify Micro](https://github.com/vhrdtech/hw/tree/main/b129_cannify_micro) board (STM32G0B1CE, Cortex-M0+):
+B129A CANnify Micro board (STM32G0B1CE, Cortex-M0+):
 firmware, a typed API, a Rust client library, a command line and a Python module, all from one API definition.
 Use it as a GitHub template ("Use this template"), rename it, add your own methods, properties and streams.
 
