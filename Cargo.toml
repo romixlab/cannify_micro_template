@@ -6,7 +6,7 @@ members = ["cannify_micro_api", "cannify_micro_client", "cannify_micro_cli", "ca
 exclude = ["firmware"]
 
 [workspace.package]
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 license = "MIT"
 repository = "https://github.com/romixlab/cannify_micro_template"

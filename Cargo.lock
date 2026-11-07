@@ -174,7 +174,7 @@ dependencies = [
 
 [[package]]
 name = "cannify_micro_cli"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "anstream",
  "anstyle",
@@ -189,7 +189,7 @@ dependencies = [
 
 [[package]]
 name = "cannify_micro_client"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "anyhow",
  "cannify_micro_api",
@@ -217,7 +217,7 @@ dependencies = [
 
 [[package]]
 name = "cannify_micro_py"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "cannify_micro_client",
  "pyo3",
