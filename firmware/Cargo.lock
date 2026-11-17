@@ -45,12 +45,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "assign-resources"
-version = "0.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "840ad5d907de7448d88a3f22b4a7b5d326c6eb3deeb9f94cfaaec7354a80b305"
-
-[[package]]
 name = "atomic-waker"
 version = "1.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -198,7 +192,6 @@ checksum = "1fd0f2584146f6f2ef48085050886acf353beff7305ebd1ae69500e27c67f64b"
 name = "cannify_micro"
 version = "0.1.0"
 dependencies = [
- "assign-resources",
  "bedrock_crash",
  "bedrock_led",
  "bedrock_rom_boot",
