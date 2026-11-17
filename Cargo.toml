@@ -22,23 +22,23 @@ cannify_micro_client = { path = "cannify_micro_client" }
 # WireWeaver from git, the same source the firmware builds against (firmware/Cargo.toml)
 wire_weaver = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std"] }
 wire_weaver_client = { git = "https://github.com/vhrdtech/wire_weaver", features = ["usb"] }
-ww_firmware_info = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std"] }
-ww_user_info = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std"] }
-ww_board_info = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std"] }
-ww_counters = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std"] }
-ww_dfu = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std"] }
-ww_uid = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std"] }
-ww_log = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std"] }
-ww_indication = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std"] }
+ww_firmware_info = { git = "https://github.com/vhrdtech/ww_stdlib", features = ["std"] }
+ww_user_info = { git = "https://github.com/vhrdtech/ww_stdlib", features = ["std"] }
+ww_board_info = { git = "https://github.com/vhrdtech/ww_stdlib", features = ["std"] }
+ww_counters = { git = "https://github.com/vhrdtech/ww_stdlib", features = ["std"] }
+ww_dfu = { git = "https://github.com/vhrdtech/ww_stdlib", features = ["std"] }
+ww_uid = { git = "https://github.com/vhrdtech/ww_stdlib", features = ["std"] }
+ww_log = { git = "https://github.com/vhrdtech/ww_stdlib", features = ["std"] }
+ww_indication = { git = "https://github.com/vhrdtech/ww_stdlib", features = ["std"] }
 ww_timebase = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std"] }
-ww_date_time = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std"] }
-ww_si = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std", "time"] }
+ww_date_time = { git = "https://github.com/vhrdtech/ww_base", features = ["std"] }
+ww_si = { git = "https://github.com/vhrdtech/ww_base", features = ["std", "time"] }
 # counters, the stored log and the bug report decoded with the firmware's ELF, as `ww report` does
-ww_report = { git = "https://github.com/vhrdtech/wire_weaver" }
+ww_report = { git = "https://github.com/vhrdtech/ww_stdlib" }
 cnt_core = "0.5" # finds the firmware's ELF by its build id, the same as ww_report
 defmt-decoder = "1.1" # the log, followed live
-ww_pin_diag = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std"] }
-ww_gpio = { git = "https://github.com/vhrdtech/wire_weaver", features = ["std"] }
+ww_pin_diag = { git = "https://github.com/vhrdtech/ww_stdlib", features = ["std"] }
+ww_gpio = { git = "https://github.com/vhrdtech/ww_stdlib", features = ["std"] }
 # host crates
 anstream = "1"
 anstyle = "1"
@@ -49,3 +49,4 @@ indicatif = "0.18"
 pyo3 = "0.29"
 thiserror = "2"
 tokio = { version = "1", features = ["rt-multi-thread", "time", "macros", "signal"] }
+

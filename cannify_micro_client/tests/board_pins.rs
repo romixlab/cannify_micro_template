@@ -6,7 +6,7 @@ use std::collections::BTreeSet;
 
 const ROOT: &str = concat!(env!("CARGO_MANIFEST_DIR"), "/..");
 
-/// `NAME: CAPS` entries of the firmware's `with_points!` list
+/// `NAME: CAPS` entries of the firmware's `with_points!` list (RP: `NAME = PIN_n: CAPS`, the embassy field dropped)
 fn firmware_points() -> Vec<(String, String)> {
     let src = std::fs::read_to_string(format!("{ROOT}/firmware/src/pins.rs")).unwrap();
     let start = src
@@ -20,6 +20,7 @@ fn firmware_points() -> Vec<(String, String)> {
         .filter(|e| !e.is_empty())
         .map(|e| {
             let (name, caps) = e.split_once(':').expect("NAME: CAPS");
+            let name = name.split_once('=').map_or(name, |(n, _)| n);
             (name.trim().to_string(), caps.trim().to_string())
         })
         .collect()
@@ -42,7 +43,7 @@ fn board_pins() -> Vec<(String, String)> {
         .position(|c| *c == "Role")
         .expect("a Role column");
     md.lines()
-        .filter(|l| l.starts_with("| `P"))
+        .filter(|l| l.starts_with("| `"))
         .map(|l| {
             let cells = cells(l);
             // "`PA11` USB_N": the pin, then the name KiCad's symbol gives it

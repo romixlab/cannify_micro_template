@@ -111,6 +111,16 @@ unsafe fn HardFault(ef: &cortex_m_rt::ExceptionFrame) -> ! {
     // stops at the fault before this handler runs.
     unsafe { bedrock_crash::capture_fault(ef, exc_return, last_reset::uptime_ms()) };
     cnt::bkp_cnt!(hard_faults: u32, error);
-    error!("HardFault {}", defmt::Debug2Format(ef));
+    error!(
+        "HardFault pc={=u32:#010x} lr={=u32:#010x} xpsr={=u32:#010x} r0={=u32:#x} r1={=u32:#x} r2={=u32:#x} r3={=u32:#x} r12={=u32:#x}",
+        ef.pc(),
+        ef.lr(),
+        ef.xpsr(),
+        ef.r0(),
+        ef.r1(),
+        ef.r2(),
+        ef.r3(),
+        ef.r12()
+    );
     bedrock_crash::reset()
 }

@@ -6,17 +6,15 @@ use core::sync::atomic::AtomicU32;
 use embassy_stm32::pac;
 use wire_weaver::prelude::*;
 use ww_board_info::{BoardSummary, RevisionSource};
-use ww_counters::{
-    BufferInfo, CounterBuffer, CountersError, CountersInfo, read_words, reset_words,
-};
+use ww_counters::{BufferInfo, CounterBuffer, CountersInfo, Index, Word, read_words, reset_words};
 use ww_dfu::{BootState, BootTarget, Error as DfuError, NodeInfo};
 use ww_error::CommonError;
 use ww_firmware_info::{BUILD_ID_MAX_LEN, FirmwareSummary, ResetRecord};
-use ww_log::{DefmtInfo, LogError};
+use ww_log::DefmtInfo;
 use ww_pin_diag::Point;
 use ww_settings::shrink_wrap::ArrayString;
 use ww_uid::UniqueId;
-use ww_user_info::{MAX_NAME_LEN, UserInfoCaps, UserInfoError};
+use ww_user_info::{Bytes, MAX_NAME_LEN, NameMax, NotesMax, UserInfoCaps, UserInfoError};
 
 /// Product name of `device.board` and `device.dfu.node`.
 const PRODUCT: &str = "B129A CANnify Micro HV Pico-Lock";
@@ -34,8 +32,8 @@ impl ServerState {
     pub(super) fn device_last_reset_boot_count(
         &mut self,
         _cx: &mut Context<'_, impl EventOut>,
-    ) -> RpcResult<u32> {
-        Ready(self.last_reset.boot_count())
+    ) -> RpcResult<ww_firmware_info::Count<ww_firmware_info::Boot, u32>> {
+        Ready(self.last_reset.boot_count().into())
     }
 
     pub(super) fn device_last_reset_clear(
@@ -54,23 +52,23 @@ impl ServerState {
         &mut self,
         _cx: &mut Context<'_, impl EventOut>,
         value: MaxLen<&'_ str, MAX_NAME_LEN>,
-    ) -> SetResult<UserInfoError<'_>> {
+    ) -> SetResult<Error<'_, UserInfoError>> {
         let Ok(label) = ArrayString::try_from(*value) else {
-            return SetError(UserInfoError::TooLong {
-                max: MAX_NAME_LEN as u16,
-            });
+            return SetError(Error::Api(UserInfoError::TooLong {
+                max: Bytes::new(MAX_NAME_LEN as u16),
+            }));
         };
         self.settings.set(|s| s.label = label);
         match self.persist_settings().await {
             Ok(()) => Set,
-            Err(e) => SetError(UserInfoError::Common(e)),
+            Err(e) => SetError(Error::Common(e)),
         }
     }
 
     pub(super) async fn get_device_label_name(
         &mut self,
         _cx: &mut Context<'_, impl EventOut>,
-    ) -> GetResult<MaxLen<&'_ str, MAX_NAME_LEN>, UserInfoError<'_>> {
+    ) -> GetResult<MaxLen<&'_ str, MAX_NAME_LEN>, Error<'_, UserInfoError>> {
         Value(MaxLen::new_unchecked(self.settings.get().label.as_str()))
     }
 }
@@ -81,18 +79,23 @@ impl ServerState {
         &mut self,
         _cx: &mut Context<'_, impl EventOut>,
         buffer: CounterBuffer,
-        offset: u16,
-    ) -> RpcResult<Result<MaxLen<RefVec<'_, UVlq32>, { ww_counters::MAX_WORDS }>, CountersError<'_>>>
+        offset: Index<Word, u16>,
+    ) -> RpcResult<Result<MaxLen<RefVec<'_, UVlq32>, { ww_counters::MAX_WORDS }>, CommonError<'_>>>
     {
         let (words, used) = counter_buffer(buffer);
-        Ready(read_words(words, used, offset, &mut self.counters_page))
+        Ready(read_words(
+            words,
+            used,
+            offset.get(),
+            &mut self.counters_page,
+        ))
     }
 
     pub(super) fn device_counters_reset(
         &mut self,
         _cx: &mut Context<'_, impl EventOut>,
         buffer: CounterBuffer,
-    ) -> RpcResult<Result<(), CountersError<'_>>> {
+    ) -> RpcResult<Result<(), CommonError<'_>>> {
         reset_words(counter_buffer(buffer).0);
         Ready(Ok(()))
     }
@@ -112,7 +115,7 @@ impl ServerState {
     pub(super) fn device_log_frames(
         &mut self,
         _cx: &mut Context<'_, impl EventOut>,
-    ) -> RpcResult<Result<(), LogError<'_>>> {
+    ) -> RpcResult<Result<(), CommonError<'_>>> {
         Ready(Ok(()))
     }
 
@@ -128,7 +131,7 @@ impl ServerState {
     pub(super) fn get_device_variant(
         &mut self,
         _cx: &mut Context<'_, impl EventOut>,
-    ) -> GetResult<Variant, ()> {
+    ) -> GetResult<Variant, CommonError<'_>> {
         Value(variant())
     }
 }
@@ -182,7 +185,7 @@ impl ServerState {
     /// Writes the settings before answering, so `Ok` means they survive a power cut.
     async fn persist_settings(&mut self) -> Result<(), CommonError<'static>> {
         self.settings.persist().await.map_err(|_e| {
-            defmt::error!("settings not saved: {}", defmt::Debug2Format(&_e));
+            defmt::error!("settings not saved: {}", _e);
             CommonError::Fault { code: 1 }
         })
     }
@@ -201,15 +204,15 @@ impl ServerState {
     pub(super) fn device_boot_confirm(
         &mut self,
         _cx: &mut Context<'_, impl EventOut>,
-    ) -> RpcResult<Result<(), DfuError>> {
-        Ready(bedrock_rom_boot::dfu::confirm())
+    ) -> RpcResult<Result<(), Error<'_, DfuError>>> {
+        Ready(bedrock_rom_boot::dfu::confirm().map_err(Error::Api))
     }
 
     pub(super) fn device_boot_revert(
         &mut self,
         _cx: &mut Context<'_, impl EventOut>,
-    ) -> RpcResult<Result<(), DfuError>> {
-        Ready(bedrock_rom_boot::dfu::revert())
+    ) -> RpcResult<Result<(), Error<'_, DfuError>>> {
+        Ready(bedrock_rom_boot::dfu::revert().map_err(Error::Api))
     }
 
     /// The reply goes out first: the reset follows `bedrock_rom_boot::REPLY_MS` later (src/boot.rs).
@@ -217,7 +220,7 @@ impl ServerState {
         &mut self,
         _cx: &mut Context<'_, impl EventOut>,
         into: BootTarget,
-    ) -> RpcResult<Result<(), DfuError>> {
+    ) -> RpcResult<Result<(), Error<'_, DfuError>>> {
         defmt::info!("reboot into {}", into);
         bedrock_rom_boot::request_reboot(bedrock_rom_boot::dfu::reboot_target(into));
         Ready(Ok(()))
@@ -266,8 +269,8 @@ impl super::server_impl::CannifyMicroApiConsts for ServerState {
 
     // kept in the settings store, no room for notes (`omit` in ww.rs)
     const DEVICE_LABEL_CAPABILITIES: UserInfoCaps = UserInfoCaps {
-        name_max: MAX_NAME_LEN as u16,
-        notes_max: 0,
+        name_max: NameMax::bounded(MAX_NAME_LEN as u8),
+        notes_max: NotesMax::bounded(0),
         persistent: true,
     };
 

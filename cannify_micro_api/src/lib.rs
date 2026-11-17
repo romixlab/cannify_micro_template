@@ -6,7 +6,7 @@
 //! Data types used in the API go here too, with `#[derive_shrink_wrap]`.
 #![no_std]
 
-use wire_weaver::prelude::*;
+use ww_api::prelude::*;
 
 /// cannify_micro device
 #[ww_api_root]
@@ -73,11 +73,11 @@ pub trait Dfu {
 #[ww_trait]
 pub trait Settings {
     /// The LED after boot: on (`true`) or off, default off
-    #[errors(Fault)]
-    property!(rw led_at_boot: bool, CommonError<'i>);
+    #[errors(CommonError(Fault))]
+    property!(rw led_at_boot: bool);
     /// Every setting back to its default, the label too
-    #[errors(Fault)]
-    fn reset() -> Result<(), CommonError<'i>>;
+    #[errors(CommonError(Fault))]
+    fn reset();
 }
 
 /// The chip a board carries, see [`Device::variant`]: every B129A has an STM32G0B1CET6 (LQFP48), what can differ is its

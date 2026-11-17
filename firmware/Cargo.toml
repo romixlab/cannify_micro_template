@@ -10,7 +10,7 @@ edition = "2024"
 defmt = "1.1"
 # defmt's global logger: every frame into device.log over WireWeaver, teed to the RTT channel "defmt" that probe-rs /
 # cnt run show (src/log.rs)
-ww_defmt_logger = { git = "https://github.com/vhrdtech/wire_weaver", features = ["rtt"] }
+ww_defmt_logger = { git = "https://github.com/vhrdtech/ww_stdlib", features = ["rtt"] }
 rtt-target = "0.6" # the RTT channels: the log's tee (src/log.rs)
 cortex-m = { version = "0.7", features = ["critical-section-single-core"] }
 cortex-m-rt = "0.7"
@@ -34,34 +34,34 @@ bedrock_sync = { git = "https://github.com/romixlab/embedded_bedrock", features 
 # settings store in the SETTINGS flash region (src/settings.rs)
 ww_settings = { git = "https://github.com/vhrdtech/wire_weaver", features = ["defmt"] }
 # flash reads that survive an ECC error left by a power cut
-ww_ecc_flash = { git = "https://github.com/vhrdtech/wire_weaver", features = ["stm32g0"] }
-ww_user_info = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
+ww_ecc_flash = { git = "https://github.com/vhrdtech/wire_weaver", features = ["stm32g0", "defmt"] }
+ww_user_info = { git = "https://github.com/vhrdtech/ww_stdlib", default-features = false }
 # raw access to the free pins (src/pins.rs)
-ww_pin_diag = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false, features = ["defmt"] }
-ww_gpio = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false, features = ["defmt"] } # its Level, Pull
-ww_error = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
+ww_pin_diag = { git = "https://github.com/vhrdtech/ww_stdlib", default-features = false, features = ["defmt"] }
+ww_gpio = { git = "https://github.com/vhrdtech/ww_stdlib", default-features = false, features = ["defmt"] } # its Level, Pull
+ww_error = { git = "https://github.com/vhrdtech/ww_base", default-features = false }
 # WireWeaver: API crate next to the firmware, served by src/ww.rs
 cannify_micro_api = { path = "../cannify_micro_api", features = ["defmt"] }
 wire_weaver = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false, features = ["defmt"] }
 ww_client_server = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
 embassy-futures = "0.1.2" # select in the server task (src/ww.rs)
-ww_firmware_info = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false, features = ["build-id", "cortex-m", "defmt"] }
+ww_firmware_info = { git = "https://github.com/vhrdtech/ww_stdlib", default-features = false, features = ["build-id", "cortex-m", "defmt"] }
 # the device contract's stdlib traits (`device` in the API crate): types in the handler signatures (src/ww/device.rs)
-ww_board_info = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
-ww_si = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false, features = ["time", "u32"] }
-ww_indication = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
+ww_board_info = { git = "https://github.com/vhrdtech/ww_stdlib", default-features = false }
+ww_si = { git = "https://github.com/vhrdtech/ww_base", default-features = false, features = ["time", "u32"] }
+ww_indication = { git = "https://github.com/vhrdtech/ww_stdlib", default-features = false }
 ww_timebase = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
-ww_date_time = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false } # clock.set_time_of_day
-ww_uid = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
-ww_counters = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
-ww_log = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
-ww_dfu = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false, features = ["defmt"] }
+ww_date_time = { git = "https://github.com/vhrdtech/ww_base", default-features = false } # clock.set_time_of_day
+ww_uid = { git = "https://github.com/vhrdtech/ww_stdlib", default-features = false }
+ww_counters = { git = "https://github.com/vhrdtech/ww_stdlib", default-features = false }
+ww_log = { git = "https://github.com/vhrdtech/ww_stdlib", default-features = false }
+ww_dfu = { git = "https://github.com/vhrdtech/ww_stdlib", default-features = false, features = ["defmt"] }
 # reliable stream state of device.log; persistent-ram: its store in .uninit RAM, kept across a crash and reset
 ww_stream = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false, features = ["persistent-ram"] }
 wire_weaver_usb_embassy = { git = "https://github.com/vhrdtech/wire_weaver" }
 
 [build-dependencies]
-ww_firmware_info = { git = "https://github.com/vhrdtech/wire_weaver", features = ["build"] } # FirmwareInfo facts (build.rs)
+ww_firmware_info = { git = "https://github.com/vhrdtech/ww_stdlib", features = ["build"] } # FirmwareInfo facts (build.rs)
 
 # See https://docs.rust-embedded.org/book/unsorted/speed-vs-size.html
 [profile.dev]

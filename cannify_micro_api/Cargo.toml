@@ -1,13 +1,17 @@
 [package]
 name = "cannify_micro_api"
-version = "0.2.0"
+version = "0.3.0"
 edition = "2024"
 description = "WireWeaver API of the cannify_micro firmware"
+
+[package.metadata.wire_weaver]
+# the API's wire version (EVO-31)
+wire = "w1.0"
 
 [features]
 # owned (alloc) variants of the API types, for host-side users
 std = [
-    "wire_weaver/std",
+    "ww_api/std",
     "ww_board_info/std",
     "ww_counters/std",
     "ww_dfu/std",
@@ -20,7 +24,7 @@ std = [
     "ww_user_info/std",
 ]
 defmt = [
-    "wire_weaver/defmt",
+    "ww_api/defmt",
     "ww_firmware_info/defmt",
     "ww_indication/defmt",
     "ww_pin_diag/defmt",
@@ -31,21 +35,22 @@ defmt = [
 
 [dependencies]
 defmt = { version = "1.1", optional = true }
-wire_weaver = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
+# the API crate prelude: macros, markers, the wire format and the common error, without the runtime
+ww_api = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
 # the device contract (`device`): stdlib traits generic host tools know
 # FirmwareInfo, LastReset; `std` reads every architecture's fault record
-ww_firmware_info = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false, features = ["cortex-m"] }
-ww_board_info = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
-ww_uid = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
+ww_firmware_info = { git = "https://github.com/vhrdtech/ww_stdlib", default-features = false, features = ["cortex-m"] }
+ww_board_info = { git = "https://github.com/vhrdtech/ww_stdlib", default-features = false }
+ww_uid = { git = "https://github.com/vhrdtech/ww_stdlib", default-features = false }
 # UserInfo: the unit's name, kept in the firmware's settings store
-ww_user_info = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
-ww_counters = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
-ww_log = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
-ww_dfu = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
+ww_user_info = { git = "https://github.com/vhrdtech/ww_stdlib", default-features = false }
+ww_counters = { git = "https://github.com/vhrdtech/ww_stdlib", default-features = false }
+ww_log = { git = "https://github.com/vhrdtech/ww_stdlib", default-features = false }
+ww_dfu = { git = "https://github.com/vhrdtech/ww_stdlib", default-features = false }
 # PinDiag: raw access to the free pins for pin tests (`ww pins tui`)
-ww_pin_diag = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
+ww_pin_diag = { git = "https://github.com/vhrdtech/ww_stdlib", default-features = false }
 # `leds` and `clock`: D14's indication, the clock a host steers onto UTC
-ww_indication = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
+ww_indication = { git = "https://github.com/vhrdtech/ww_stdlib", default-features = false }
 ww_timebase = { git = "https://github.com/vhrdtech/wire_weaver", default-features = false }
 
 [dev-dependencies]

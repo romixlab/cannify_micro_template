@@ -41,7 +41,7 @@ CARGO_TOOLS = [
     (
         "ww",
         "WireWeaver command line: introspect and call any API",
-        ["--git", "https://github.com/vhrdtech/wire_weaver", "wire_weaver_cli"],
+        ["--git", "https://github.com/vhrdtech/ww_tools", "ww"],
     ),
     (
         "boardmap",

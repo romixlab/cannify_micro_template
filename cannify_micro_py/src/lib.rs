@@ -197,7 +197,7 @@ impl Device {
         d.set_item("source", s.source.as_ref().map(|src| format!("{src:?}")))?;
         d.set_item("residual_us", check.residual_us)?;
         d.set_item("rtt_us", check.rtt_us)?;
-        d.set_item("slew_us", s.slew_us)?;
+        d.set_item("slew_us", s.slew.map(|v| v.get()))?;
         d.set_item("error_us", s.error.as_ref().map(|e| e.to_f64() * 1e6))?;
         d.set_item("rate_ppm", fit.map(|f| (f.slope - 1.0) * 1e6))?;
         d.set_item("fit_rms_us", fit.map(|f| f.residual_rms / 1e3))?;

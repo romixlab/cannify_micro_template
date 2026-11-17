@@ -75,7 +75,7 @@ dependencies); the firmware is a standalone crate next to it, excluded from the 
 - `firmware/` — the firmware; `src/ww.rs` implements the API on `ServerState` (`ww_codegen!`) and runs the transport.
   All firmware commands (`cargo build`, `cargo run`) run there.
 
-WireWeaver crates come from git (`https://github.com/vhrdtech/wire_weaver`, pinned by `firmware/Cargo.lock` and the root's).
+WireWeaver crates come from git (`wire_weaver`, `ww_base`, `ww_stdlib` under `https://github.com/vhrdtech`, pinned by `firmware/Cargo.lock` and the root's).
 Its `AGENTS.md` and `docs/` explain the API DSL (methods, properties, streams) and the wire format.
 
 The trait, `ServerState` and the method implementations were blinky stubs; after generation they are this

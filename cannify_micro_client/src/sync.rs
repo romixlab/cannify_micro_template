@@ -8,7 +8,7 @@ use std::time::Duration;
 use wire_weaver_client::clock_sync::{ClockSteering, HostClock, Phase, Status};
 use ww_si::Second;
 
-use crate::{Cannify, Error, Result, call, call_fallible, read};
+use crate::{Cannify, Error, Result, call, read, write_plain};
 
 pub use ww_indication::{Brightness, Mode};
 pub use ww_timebase::{SyncState, SyncStatusOwned};
@@ -33,11 +33,7 @@ impl Cannify {
     }
 
     pub async fn set_leds_mode(&self, mode: Mode) -> Result<()> {
-        let item = "Indication::mode";
-        let w = self.raw.leds().write_mode(mode);
-        w.write()
-            .await
-            .map_err(|source| Error::Link { item, source })
+        write_plain("Indication::mode", self.raw.leds().write_mode(mode)).await
     }
 
     /// D14's peak brightness (RAM only, `Normal` after a reset).
@@ -46,11 +42,11 @@ impl Cannify {
     }
 
     pub async fn set_brightness(&self, brightness: Brightness) -> Result<()> {
-        let item = "Indication::brightness";
-        let w = self.raw.leds().write_brightness(brightness);
-        w.write()
-            .await
-            .map_err(|source| Error::Link { item, source })
+        write_plain(
+            "Indication::brightness",
+            self.raw.leds().write_brightness(brightness),
+        )
+        .await
     }
 
     /// Blinks D14 at full brightness for `duration` (up to 10 minutes), then shows its mode again; an error while
@@ -58,7 +54,7 @@ impl Cannify {
     pub async fn identify(&self, duration: Duration) -> Result<()> {
         let ms = u32::try_from(duration.as_millis())
             .map_err(|_| Error::Invalid(format!("identify for {duration:?}: too long")))?;
-        call_fallible(
+        call(
             "Indication::identify",
             self.raw.leds().identify(Second::milli(ms)),
         )
@@ -125,7 +121,8 @@ impl Cannify {
         let mid_utc_ns = (before + (after - before) / 2) as i128 + utc_offset;
         Ok(ClockCheck {
             status,
-            residual_us: shared.map(|us| (us as i128 * 1000 - mid_utc_ns) as f64 / 1000.0),
+            residual_us: shared
+                .map(|t| (t.get().get() as i128 * 1000 - mid_utc_ns) as f64 / 1000.0),
             rtt_us: (after - before) as f64 / 1000.0,
         })
     }
@@ -147,8 +144,8 @@ pub fn clock_line(check: &ClockCheck, steering: Option<&Status>) -> String {
         )),
         None => line.push_str(", no shared time"),
     }
-    if let Some(slew) = s.slew_us {
-        line.push_str(&format!(", slew {slew} µs"));
+    if let Some(slew) = s.slew {
+        line.push_str(&format!(", slew {} µs", slew.get()));
     }
     if let Some(error) = &s.error {
         line.push_str(&format!(", error ≤ {:.2} ms", error.to_f64() * 1e3));

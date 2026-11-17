@@ -19,7 +19,7 @@
 //! Code running from bank 1 keeps running while bank 2 erases; code placed in bank 2 (an image above half the
 //! flash) stalls like on a single-bank part.
 
-use defmt::{Debug2Format, error, info};
+use defmt::{error, info};
 use embassy_stm32::Peri;
 use embassy_stm32::flash::{Blocking, FLASH_BASE, Flash};
 use embassy_stm32::peripherals::FLASH;
@@ -78,7 +78,7 @@ impl SettingsStore {
         };
         match this.settings.load(&mut this.store).await {
             Ok(report) => info!("settings: {}", report),
-            Err(e) => error!("settings not read, defaults: {}", Debug2Format(&e)),
+            Err(e) => error!("settings not read, defaults: {}", e),
         }
         this
     }
@@ -128,7 +128,7 @@ impl SettingsStore {
             Err(_e) => {
                 // kept in RAM, tried again in RETRY_MS
                 self.retry_at = Instant::now() + embassy_time::Duration::from_millis(RETRY_MS);
-                error!("settings not written: {}", Debug2Format(&_e));
+                error!("settings not written: {}", _e);
             }
         }
     }
@@ -136,7 +136,7 @@ impl SettingsStore {
     /// Erases the page the next compaction moves to, if it needs it, so a later write doesn't erase.
     async fn erase_ahead(&mut self) {
         if let Err(e) = self.store.maintain().await {
-            error!("settings erase ahead failed: {}", Debug2Format(&e));
+            error!("settings erase ahead failed: {}", e);
         }
     }
 }

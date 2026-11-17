@@ -42,7 +42,7 @@ impl ServerState {
         &mut self,
         _cx: &mut Context<'_, impl EventOut>,
         value: Mode,
-    ) -> SetResult<()> {
+    ) -> SetResult<CommonError<'_>> {
         let visible = match value {
             Mode::AllOff | Mode::OnlyEssential => false,
             Mode::Normal => true,
@@ -60,7 +60,7 @@ impl ServerState {
     pub(super) fn get_leds_mode(
         &mut self,
         _cx: &mut Context<'_, impl EventOut>,
-    ) -> GetResult<Mode, ()> {
+    ) -> GetResult<Mode, CommonError<'_>> {
         Value(self.leds.mode)
     }
 
@@ -68,7 +68,7 @@ impl ServerState {
         &mut self,
         _cx: &mut Context<'_, impl EventOut>,
         value: Brightness,
-    ) -> SetResult<()> {
+    ) -> SetResult<CommonError<'_>> {
         let peak = PEAKS.peak(value).unwrap_or_else(|| {
             cnt!(leds_brightness_unknown: u32);
             DEFAULT_PEAK
@@ -81,7 +81,7 @@ impl ServerState {
     pub(super) fn get_leds_brightness(
         &mut self,
         _cx: &mut Context<'_, impl EventOut>,
-    ) -> GetResult<Brightness, ()> {
+    ) -> GetResult<Brightness, CommonError<'_>> {
         Value(self.leds.brightness)
     }
 
@@ -97,7 +97,7 @@ impl ServerState {
         }
         let Some(ms) = to_ms(&duration) else {
             return Ready(Err(CommonError::InvalidArgument {
-                arg: 0,
+                arg: 0.into(),
                 reason: MaxLen::new_unchecked("not an integer number of s, ms or us"),
             }));
         };

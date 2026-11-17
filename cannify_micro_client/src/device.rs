@@ -8,7 +8,7 @@ use defmt_decoder::{DecodeError, StreamDecoder, Table};
 use wire_weaver::prelude::UVlq64;
 use wire_weaver_client::{StreamCursor, StreamEvent};
 
-use crate::{Cannify, Error, Result, call, call_fallible, read, write};
+use crate::{Cannify, Error, Result, call, call_fallible, read, write_plain};
 
 pub use cannify_micro_api::{SiliconRevision, Variant};
 pub use ww_board_info::BoardSummaryOwned;
@@ -47,7 +47,7 @@ impl Cannify {
 
     /// Zeroes the counters of one buffer.
     pub async fn reset_counters(&self, buffer: CounterBuffer) -> Result<()> {
-        call_fallible(
+        call(
             "Counters::reset",
             self.raw.device().counters().reset(buffer),
         )
@@ -160,20 +160,16 @@ impl Cannify {
 
     /// Sets the LED after boot; it is in flash when the call returns.
     pub async fn set_led_at_boot(&self, on: bool) -> Result<()> {
-        write(
+        write_plain(
             "Settings::led_at_boot",
             self.raw.device().settings().write_led_at_boot(on),
-            |e| Error::Device {
-                item: "Settings::led_at_boot",
-                message: format!("{e:?}"),
-            },
         )
         .await
     }
 
     /// Every setting back to its default, the label too; in flash when the call returns.
     pub async fn reset_settings(&self) -> Result<()> {
-        call_fallible("Settings::reset", self.raw.device().settings().reset()).await
+        call("Settings::reset", self.raw.device().settings().reset()).await
     }
 
     /// The boot state: always `Confirmed`, the firmware is the only image.

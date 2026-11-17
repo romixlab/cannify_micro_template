@@ -35,7 +35,7 @@ use wire_weaver_client::{
 
 pub use wire_weaver_client::{ClientConfig, DeviceApiInfo, WwClient};
 pub use ww_firmware_info::{FirmwareSummaryOwned, ResetRecordOwned};
-pub use ww_user_info::UserInfoErrorOwned;
+pub use ww_user_info::UserInfoError;
 
 /// Longest label the firmware keeps (`UserInfo::CAPABILITIES`).
 pub const MAX_LABEL_LEN: usize = ww_user_info::MAX_NAME_LEN;
@@ -59,8 +59,8 @@ pub enum Error {
     Unimplemented { item: &'static str },
     /// The firmware refused to store the label (too long, flash busy or faulted).
     #[error("label: {0:?}")]
-    Label(UserInfoErrorOwned),
-    /// The firmware refused a call with its error (counters, settings, boot).
+    Label(UserInfoError),
+    /// The firmware refused a call with its error or a common one (`Busy`, `Unsupported`, ...) (counters, settings, boot).
     #[error("{item}: {message}")]
     Device { item: &'static str, message: String },
     /// The firmware's ELF, needed to decode counters and the log, was not found or does not match.
@@ -76,8 +76,8 @@ pub enum Error {
 
 pub type Result<T, E = Error> = std::result::Result<T, E>;
 
-/// USB vendor and product id of the firmware's WireWeaver interface (`c0de:cafe` unless the firmware's `ww.rs`
-/// sets its own): [Usb::default] looks only at these, and connecting checks that the API is `cannify_micro_api`.
+/// USB vendor and product id of the firmware's WireWeaver interface (`c0de:cafe`, set in
+/// the firmware's `ww.rs`): [Usb::default] looks only at these, and connecting checks that the API is `cannify_micro_api`.
 pub const USB_ID: (u16, u16) = (0xc0de, 0xcafe);
 
 /// How to reach the board over USB: its vendor and product id, and its serial number when several are attached.
@@ -143,8 +143,8 @@ impl WwClient for CannifyClient {
         ClientConfig::new().usb_vid_pid(USB_ID.0, USB_ID.1)
     }
 
-    fn from_cmd(cmd: Commander) -> Self {
-        Self { cmd }
+    fn try_from_cmd(cmd: Commander) -> Result<Self, wire_weaver_client::Error> {
+        Ok(Self { cmd })
     }
 }
 
@@ -169,12 +169,12 @@ pub fn firmware_line(fw: &FirmwareSummaryOwned) -> String {
         });
     }
     if let Some(built) = &fw.built {
-        let secs = built.time.secs.value();
+        let secs = built.time.secs.get().value();
         facts.push(format!(
             "built {}-{:02}-{:02} {:02}:{:02} UTC",
             built.date.year.year(),
-            built.date.month.value(),
-            built.date.day.value(),
+            built.date.month.get().value(),
+            built.date.day.get().value(),
             secs / 3600,
             secs % 3600 / 60
         ));
@@ -216,8 +216,11 @@ pub fn board_line(b: &BoardSummaryOwned) -> String {
 /// the record has them (`cannify report` names the crash's addresses with the ELF).
 pub fn reset_lines(r: &ResetRecordOwned, boots: u32) -> Vec<String> {
     let mut first = format!("{:?}, boot {boots} since cleared", r.cause);
-    if r.boots_since_crash > 0 {
-        first.push_str(&format!(", crash data {} boots old", r.boots_since_crash));
+    if r.boots_since_crash.get() > 0 {
+        first.push_str(&format!(
+            ", crash data {} boots old",
+            r.boots_since_crash.get()
+        ));
     }
     if let Some(up) = &r.uptime {
         first.push_str(&format!(", ran {:.1} s", up.to_f64()));
@@ -237,24 +240,31 @@ pub fn reset_lines(r: &ResetRecordOwned, boots: u32) -> Vec<String> {
     lines
 }
 
-/// The update node as `name  value` lines: product, role, profile, boot state, app version, last result.
+/// The update node as `name  value` lines: product, role, profile, boot state, app image, last result.
 pub fn node_lines(n: &NodeInfoOwned) -> Vec<String> {
-    let version = n
-        .app_version
-        .map_or_else(|| "none".to_string(), |v| v.to_string());
+    let app = n.app.map_or_else(
+        || "none".to_string(),
+        |a| {
+            format!(
+                "version {} (product id {:#010x}, security counter {})",
+                a.version.0, a.product.0, a.security_counter.0
+            )
+        },
+    );
+    let last_version = n
+        .last_result
+        .version
+        .map_or_else(|| "none".to_string(), |v| v.0.to_string());
     vec![
-        format!(
-            "product      {} (id {:#010x})",
-            n.product.as_str(),
-            n.product_id
-        ),
+        format!("product      {}", n.product.as_str()),
         format!("role         {:?}", n.role),
         format!("profile      {:?}", n.profile),
         format!("boot state   {:?}", n.boot_state),
-        format!("app version  {version} (floor {})", n.version_floor),
+        format!("app image    {app}"),
+        format!("floor        security counter {}", n.security_floor.0),
         format!(
-            "last result  {:?} (version {})",
-            n.last_result.outcome, n.last_result.version
+            "last result  {:?} (version {last_version})",
+            n.last_result.outcome
         ),
     ]
 }
@@ -265,14 +275,23 @@ pub fn api_line(info: &DeviceApiInfo) -> String {
     format!("{} {:?}", v.crate_id, v.version)
 }
 
+/// The client's error of `item` as [Error]: a common error the firmware answered with becomes [Error::Device].
+fn link(item: &'static str, source: wire_weaver_client::Error) -> Error {
+    match source.common() {
+        Some(c) => Error::Device {
+            item,
+            message: c.to_string(),
+        },
+        None => Error::Link { item, source },
+    }
+}
+
 /// A method call of the generated client, with [Error] instead of the client's error.
 pub async fn call<T: DeserializeShrinkWrapOwned>(
     item: &'static str,
     p: PreparedCall<T>,
 ) -> Result<T> {
-    p.call()
-        .await
-        .map_err(|source| Error::Link { item, source })
+    p.call().await.map_err(|source| link(item, source))
 }
 
 /// A method call of the generated client whose error type is `E` (`Result<T, E>` in the API), with [Error] instead of
@@ -287,6 +306,10 @@ where
             item,
             message: format!("{e:?}"),
         },
+        CallError::Common(c) => Error::Device {
+            item,
+            message: c.to_string(),
+        },
         CallError::Unimplemented { .. } => Error::Unimplemented { item },
         CallError::Client(source) => Error::Link { item, source },
     })
@@ -297,9 +320,7 @@ pub async fn read<T: DeserializeShrinkWrapOwned + std::fmt::Debug>(
     item: &'static str,
     p: PreparedRead<T>,
 ) -> Result<T> {
-    p.read()
-        .await
-        .map_err(|source| Error::Link { item, source })
+    p.read().await.map_err(|source| link(item, source))
 }
 
 /// A property write of the generated client whose error type is `E`, mapped through `device`.
@@ -313,9 +334,18 @@ where
 {
     p.write().await.map_err(|e| match e {
         CallError::Device(e) => device(e),
+        CallError::Common(c) => Error::Device {
+            item,
+            message: c.to_string(),
+        },
         CallError::Unimplemented { .. } => Error::Unimplemented { item },
         CallError::Client(source) => Error::Link { item, source },
     })
+}
+
+/// A write of a property without an error type of its own, with [Error] instead of the client's error.
+pub async fn write_plain(item: &'static str, p: PreparedWrite) -> Result<()> {
+    p.write().await.map_err(|source| link(item, source))
 }
 
 impl Cannify {
@@ -427,6 +457,7 @@ impl Cannify {
             self.raw.device().last_reset().boot_count(),
         )
         .await
+        .map(|boots| boots.get())
     }
 
     /// Forgets the crash record and zeroes the boot counter.

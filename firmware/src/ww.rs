@@ -22,7 +22,8 @@ use wire_weaver::prelude::*;
 use wire_weaver::{MessageSink, WireWeaverAsyncApiBackend};
 use wire_weaver_usb_embassy::ww_device::LinkEvent;
 use wire_weaver_usb_embassy::{LinkConfig, UsbBuffers, UsbDevice, UsbServer, UsbTimings, usb_init};
-use ww_pin_diag::{Level, PinDiagError, PointState};
+use ww_pin_diag::{Level, PinDiagError, PointState, TestPoint};
+use ww_si::Index;
 use ww_uid::{UidKind, UidSource, UniqueId};
 
 /// Longest WireWeaver message the device accepts and can reply with (reported to the host)
@@ -119,22 +120,30 @@ impl ServerState {
     fn pins_set(
         &mut self,
         _cx: &mut Context<'_, impl EventOut>,
-        point: u16,
+        point: Index<TestPoint, u16>,
         state: PointState,
-    ) -> RpcResult<Result<(), PinDiagError<'_>>> {
+    ) -> RpcResult<Result<(), Error<'_, PinDiagError<'_>>>> {
+        let point = point.get();
         Ready(
             self.pins
                 .set(point, state)
-                .inspect_err(|e| refused(point, e)),
+                .inspect_err(|e| refused(point, e))
+                .map_err(Error::Api),
         )
     }
 
     fn pins_read(
         &mut self,
         _cx: &mut Context<'_, impl EventOut>,
-        point: u16,
-    ) -> RpcResult<Result<Level, PinDiagError<'_>>> {
-        Ready(self.pins.read(point).inspect_err(|e| refused(point, e)))
+        point: Index<TestPoint, u16>,
+    ) -> RpcResult<Result<Level, Error<'_, PinDiagError<'_>>>> {
+        let point = point.get();
+        Ready(
+            self.pins
+                .read(point)
+                .inspect_err(|e| refused(point, e))
+                .map_err(Error::Api),
+        )
     }
 
     fn pins_release_all(&mut self, _cx: &mut Context<'_, impl EventOut>) -> RpcResult<()> {
@@ -198,7 +207,9 @@ impl WireWeaverAsyncApiBackend for ServerState {
 fn link_config() -> LinkConfig<'static> {
     LinkConfig::new(
         cannify_micro_api::CANNIFY_MICRO_API_FULL_GID,
+        cannify_micro_api::CANNIFY_MICRO_API_WIRE_VERSION,
         server_impl::api_hash(),
+        server_impl::image_facts(),
         ww_client_server::COMPACT_VERSION,
     )
 }
@@ -230,7 +241,7 @@ pub fn start(spawner: Spawner, driver: UsbDriver, state: ServerState) {
         link_config(),
         server_impl::API_ID,
         |config| {
-            // VID:PID is c0de:cafe unless set here
+            // VID:PID is c0de:cafe; usb_init_with_ids() takes others ([usb] vid / pid in the board preset)
             config.product = Some("cannify_micro");
             config.serial_number = Some(embassy_stm32::uid::uid_hex());
         },

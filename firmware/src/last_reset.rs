@@ -91,7 +91,7 @@ pub fn record(snapshot: &Snapshot) -> ResetRecord<'_> {
             slice: crash.map_or(&[][..], |c| c.stack),
         }),
         message: MaxLen::new_unchecked(crash.map_or("", |c| c.message)),
-        boots_since_crash: crash.map_or(0, |c| c.boots_since),
+        boots_since_crash: crash.map_or(0, |c| c.boots_since).into(),
     }
 }
 

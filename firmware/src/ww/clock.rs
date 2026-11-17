@@ -11,7 +11,7 @@ use ww_error::CommonError;
 use ww_si::ww_numeric::NumericValue;
 use ww_si::{Prefix, Second};
 use ww_timebase::{
-    ClockError, ClockInfo, DateTime, SteerPoint, SyncConfig, SyncSource, SyncStatus,
+    ClockInfo, DateTime, SteerPoint, SyncConfig, SyncSource, SyncStatus, UnixMicros,
 };
 
 /// Local or shared time as `clock` writes it: `U32` microseconds, wrapping every 71.6 minutes (Cortex-M0+, no
@@ -77,7 +77,7 @@ impl ServerState {
         &mut self,
         _cx: &mut Context<'_, impl EventOut>,
         config: SyncConfig,
-    ) -> RpcResult<Result<(), ClockError<'_>>> {
+    ) -> RpcResult<Result<(), CommonError<'_>>> {
         Ready(
             self.clock
                 .server
@@ -104,11 +104,10 @@ impl ServerState {
         &mut self,
         _cx: &mut Context<'_, impl EventOut>,
         _t: DateTime,
-    ) -> RpcResult<Result<(), ClockError<'_>>> {
+    ) -> RpcResult<Result<(), CommonError<'_>>> {
         Ready(Err(CommonError::WrongState {
             reason: MaxLen::new_unchecked("no sync line, never a master"),
-        }
-        .into()))
+        }))
     }
 
     /// A `time_map` point is sent right after, if a host is subscribed: the host steers about once a second while
@@ -117,7 +116,7 @@ impl ServerState {
         &mut self,
         cx: &mut Context<'_, impl EventOut>,
         point: SteerPoint<'_>,
-    ) -> RpcResult<Result<Option<SyncSource>, ClockError<'_>>> {
+    ) -> RpcResult<Result<Option<SyncSource>, CommonError<'_>>> {
         let result = SYNC.with(|clock, now_us| self.clock.server.steer(clock, now_us, &point));
         if result.is_ok()
             && self.clock.time_map_open
@@ -135,7 +134,7 @@ impl ServerState {
     pub(super) fn clock_shared_now(
         &mut self,
         _cx: &mut Context<'_, impl EventOut>,
-    ) -> RpcResult<Option<u64>> {
+    ) -> RpcResult<Option<UnixMicros<u64>>> {
         Ready(SYNC.with(|clock, now_us| self.clock.server.shared_now(clock, now_us)))
     }
 
@@ -144,7 +143,7 @@ impl ServerState {
         &mut self,
         _cx: &mut Context<'_, impl EventOut>,
         sources: Option<MaxLen<RefVec<'_, SyncSource>, 8>>,
-    ) -> RpcResult<Result<(), ClockError<'_>>> {
+    ) -> RpcResult<Result<(), CommonError<'_>>> {
         Ready(SYNC.with(|clock, _now_us| {
             self.clock
                 .server

@@ -109,7 +109,7 @@ picks one. A probe can be opened by one program at a time: stop `just run` / `ju
 (`cannify probes` lists them, and the shell completes the serials: `source <(COMPLETE=bash cannify)`).
 
 `cnt tui --chip STM32G0B1CETx` shows the event counters; `ww` (the WireWeaver CLI,
-`cargo install --git https://github.com/vhrdtech/wire_weaver wire_weaver_cli`) can introspect and call any API
+`cargo install --git https://github.com/vhrdtech/ww_tools ww`) can introspect and call any API
 without the generated client: `ww introspect`.
 
 ## Device
@@ -154,7 +154,7 @@ next reset or flash comes back.
 
 ## Pins
 
-The firmware serves `pins` ([`ww_pin_diag::PinDiag`](https://github.com/vhrdtech/wire_weaver/blob/master/docs/std_library/ww_pin_diag.md)):
+The firmware serves `pins` ([`ww_pin_diag::PinDiag`](https://github.com/vhrdtech/ww_stdlib/blob/main/docs/ww_pin_diag.md)):
 raw access to every pin [the pin table](docs/board/b129a_cannify-pins.md) marks free, named as there. The SWD pins,
 USB, the LED, the CAN transceiver, the supply dividers, the crystals and reset are not in it. A pin stays in analog
 mode, as after reset, until a host sets or reads it, and goes back there when the host releases the pins,
