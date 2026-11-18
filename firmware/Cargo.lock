@@ -71,7 +71,7 @@ dependencies = [
 [[package]]
 name = "bedrock_crash"
 version = "0.1.0"
-source = "git+https://github.com/romixlab/embedded_bedrock#74dea3c2e43bfe74dc1b360ad926138671a6fdf2"
+source = "git+https://github.com/romixlab/embedded_bedrock#546eb17454e896d88fdd32a655f55f0be9257fe8"
 dependencies = [
  "cortex-m",
  "cortex-m-rt",
@@ -81,7 +81,7 @@ dependencies = [
 [[package]]
 name = "bedrock_led"
 version = "0.1.0"
-source = "git+https://github.com/romixlab/embedded_bedrock#74dea3c2e43bfe74dc1b360ad926138671a6fdf2"
+source = "git+https://github.com/romixlab/embedded_bedrock#546eb17454e896d88fdd32a655f55f0be9257fe8"
 dependencies = [
  "defmt 1.2.0",
  "embassy-sync",
@@ -93,7 +93,7 @@ dependencies = [
 [[package]]
 name = "bedrock_rom_boot"
 version = "0.1.0"
-source = "git+https://github.com/romixlab/embedded_bedrock#74dea3c2e43bfe74dc1b360ad926138671a6fdf2"
+source = "git+https://github.com/romixlab/embedded_bedrock#546eb17454e896d88fdd32a655f55f0be9257fe8"
 dependencies = [
  "cortex-m",
  "defmt 1.2.0",
@@ -107,7 +107,7 @@ dependencies = [
 [[package]]
 name = "bedrock_sync"
 version = "0.1.0"
-source = "git+https://github.com/romixlab/embedded_bedrock#74dea3c2e43bfe74dc1b360ad926138671a6fdf2"
+source = "git+https://github.com/romixlab/embedded_bedrock#546eb17454e896d88fdd32a655f55f0be9257fe8"
 dependencies = [
  "defmt 1.2.0",
  "embassy-sync",
