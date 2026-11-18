@@ -2101,7 +2101,7 @@ dependencies = [
 [[package]]
 name = "ww_board_info"
 version = "0.3.0"
-source = "git+https://github.com/vhrdtech/ww_stdlib#53da436cd7868181532aa6f96457911bbf201edf"
+source = "git+https://github.com/vhrdtech/ww_stdlib#7beabe1e40aee2b3de678f0fea92bf1b6bae3101"
 dependencies = [
  "embedded-storage-async",
  "ww_api",
@@ -2123,7 +2123,7 @@ dependencies = [
 [[package]]
 name = "ww_counters"
 version = "0.1.0"
-source = "git+https://github.com/vhrdtech/ww_stdlib#53da436cd7868181532aa6f96457911bbf201edf"
+source = "git+https://github.com/vhrdtech/ww_stdlib#7beabe1e40aee2b3de678f0fea92bf1b6bae3101"
 dependencies = [
  "ww_api",
  "ww_error",
@@ -2151,7 +2151,7 @@ dependencies = [
 [[package]]
 name = "ww_defmt_logger"
 version = "0.5.0"
-source = "git+https://github.com/vhrdtech/ww_stdlib#53da436cd7868181532aa6f96457911bbf201edf"
+source = "git+https://github.com/vhrdtech/ww_stdlib#7beabe1e40aee2b3de678f0fea92bf1b6bae3101"
 dependencies = [
  "critical-section",
  "defmt 1.2.0",
@@ -2180,7 +2180,7 @@ dependencies = [
 [[package]]
 name = "ww_dfu"
 version = "0.1.0"
-source = "git+https://github.com/vhrdtech/ww_stdlib#53da436cd7868181532aa6f96457911bbf201edf"
+source = "git+https://github.com/vhrdtech/ww_stdlib#7beabe1e40aee2b3de678f0fea92bf1b6bae3101"
 dependencies = [
  "defmt 1.2.0",
  "ww_api",
@@ -2211,7 +2211,7 @@ dependencies = [
 [[package]]
 name = "ww_firmware_info"
 version = "0.1.0"
-source = "git+https://github.com/vhrdtech/ww_stdlib#53da436cd7868181532aa6f96457911bbf201edf"
+source = "git+https://github.com/vhrdtech/ww_stdlib#7beabe1e40aee2b3de678f0fea92bf1b6bae3101"
 dependencies = [
  "defmt 1.2.0",
  "ww_api",
@@ -2242,7 +2242,7 @@ dependencies = [
 [[package]]
 name = "ww_gpio"
 version = "0.1.0"
-source = "git+https://github.com/vhrdtech/ww_stdlib#53da436cd7868181532aa6f96457911bbf201edf"
+source = "git+https://github.com/vhrdtech/ww_stdlib#7beabe1e40aee2b3de678f0fea92bf1b6bae3101"
 dependencies = [
  "defmt 1.2.0",
  "ww_api",
@@ -2252,7 +2252,7 @@ dependencies = [
 [[package]]
 name = "ww_indication"
 version = "0.1.0"
-source = "git+https://github.com/vhrdtech/ww_stdlib#53da436cd7868181532aa6f96457911bbf201edf"
+source = "git+https://github.com/vhrdtech/ww_stdlib#7beabe1e40aee2b3de678f0fea92bf1b6bae3101"
 dependencies = [
  "defmt 1.2.0",
  "ww_api",
@@ -2262,7 +2262,7 @@ dependencies = [
 [[package]]
 name = "ww_interned"
 version = "0.1.0"
-source = "git+https://github.com/vhrdtech/ww_stdlib#53da436cd7868181532aa6f96457911bbf201edf"
+source = "git+https://github.com/vhrdtech/ww_stdlib#7beabe1e40aee2b3de678f0fea92bf1b6bae3101"
 dependencies = [
  "defmt 1.2.0",
  "ww_api",
@@ -2285,7 +2285,7 @@ dependencies = [
 [[package]]
 name = "ww_log"
 version = "0.1.0"
-source = "git+https://github.com/vhrdtech/ww_stdlib#53da436cd7868181532aa6f96457911bbf201edf"
+source = "git+https://github.com/vhrdtech/ww_stdlib#7beabe1e40aee2b3de678f0fea92bf1b6bae3101"
 dependencies = [
  "ww_api",
 ]
@@ -2311,7 +2311,7 @@ dependencies = [
 [[package]]
 name = "ww_pin_diag"
 version = "0.1.0"
-source = "git+https://github.com/vhrdtech/ww_stdlib#53da436cd7868181532aa6f96457911bbf201edf"
+source = "git+https://github.com/vhrdtech/ww_stdlib#7beabe1e40aee2b3de678f0fea92bf1b6bae3101"
 dependencies = [
  "defmt 1.2.0",
  "ww_api",
@@ -2421,7 +2421,7 @@ dependencies = [
 [[package]]
 name = "ww_uid"
 version = "0.1.0"
-source = "git+https://github.com/vhrdtech/ww_stdlib#53da436cd7868181532aa6f96457911bbf201edf"
+source = "git+https://github.com/vhrdtech/ww_stdlib#7beabe1e40aee2b3de678f0fea92bf1b6bae3101"
 dependencies = [
  "ww_api",
 ]
@@ -2429,7 +2429,7 @@ dependencies = [
 [[package]]
 name = "ww_user_info"
 version = "0.1.0"
-source = "git+https://github.com/vhrdtech/ww_stdlib#53da436cd7868181532aa6f96457911bbf201edf"
+source = "git+https://github.com/vhrdtech/ww_stdlib#7beabe1e40aee2b3de678f0fea92bf1b6bae3101"
 dependencies = [
  "defmt 1.2.0",
  "ww_api",

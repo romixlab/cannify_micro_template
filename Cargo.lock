@@ -673,7 +673,7 @@ dependencies = [
  "libc",
  "option-ext",
  "redox_users",
- "windows-sys 0.59.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -751,7 +751,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e35d6e78f4cebb90e51d543db8fe41528851d6deeef6ef21ebd4bfdc1e784776"
 dependencies = [
  "libc",
- "windows-sys 0.59.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -995,7 +995,7 @@ version = "1.0.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "82cb6a9f675da968c63b6208c641b9dca58fc0133ae53375736b1767b0cab8bd"
 dependencies = [
- "windows-sys 0.59.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -1547,7 +1547,7 @@ dependencies = [
  "errno",
  "libc",
  "linux-raw-sys",
- "windows-sys 0.59.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -1864,7 +1864,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "230a1b821ccbd75b185820a1f1ff7b14d21da1e442e22c0863ea5f08771a8874"
 dependencies = [
  "rustix",
- "windows-sys 0.59.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -2500,7 +2500,7 @@ dependencies = [
 [[package]]
 name = "ww_board_info"
 version = "0.3.0"
-source = "git+https://github.com/vhrdtech/ww_stdlib#53da436cd7868181532aa6f96457911bbf201edf"
+source = "git+https://github.com/vhrdtech/ww_stdlib#7beabe1e40aee2b3de678f0fea92bf1b6bae3101"
 dependencies = [
  "embedded-storage-async",
  "ww_api",
@@ -2522,7 +2522,7 @@ dependencies = [
 [[package]]
 name = "ww_counters"
 version = "0.1.0"
-source = "git+https://github.com/vhrdtech/ww_stdlib#53da436cd7868181532aa6f96457911bbf201edf"
+source = "git+https://github.com/vhrdtech/ww_stdlib#7beabe1e40aee2b3de678f0fea92bf1b6bae3101"
 dependencies = [
  "anyhow",
  "cnt_core",
@@ -2553,7 +2553,7 @@ dependencies = [
 [[package]]
 name = "ww_dfu"
 version = "0.1.0"
-source = "git+https://github.com/vhrdtech/ww_stdlib#53da436cd7868181532aa6f96457911bbf201edf"
+source = "git+https://github.com/vhrdtech/ww_stdlib#7beabe1e40aee2b3de678f0fea92bf1b6bae3101"
 dependencies = [
  "ww_api",
  "ww_si",
@@ -2572,7 +2572,7 @@ dependencies = [
 [[package]]
 name = "ww_firmware_info"
 version = "0.1.0"
-source = "git+https://github.com/vhrdtech/ww_stdlib#53da436cd7868181532aa6f96457911bbf201edf"
+source = "git+https://github.com/vhrdtech/ww_stdlib#7beabe1e40aee2b3de678f0fea92bf1b6bae3101"
 dependencies = [
  "defmt",
  "ww_api",
@@ -2603,7 +2603,7 @@ dependencies = [
 [[package]]
 name = "ww_gpio"
 version = "0.1.0"
-source = "git+https://github.com/vhrdtech/ww_stdlib#53da436cd7868181532aa6f96457911bbf201edf"
+source = "git+https://github.com/vhrdtech/ww_stdlib#7beabe1e40aee2b3de678f0fea92bf1b6bae3101"
 dependencies = [
  "defmt",
  "ww_api",
@@ -2613,7 +2613,7 @@ dependencies = [
 [[package]]
 name = "ww_indication"
 version = "0.1.0"
-source = "git+https://github.com/vhrdtech/ww_stdlib#53da436cd7868181532aa6f96457911bbf201edf"
+source = "git+https://github.com/vhrdtech/ww_stdlib#7beabe1e40aee2b3de678f0fea92bf1b6bae3101"
 dependencies = [
  "defmt",
  "ww_api",
@@ -2623,7 +2623,7 @@ dependencies = [
 [[package]]
 name = "ww_interned"
 version = "0.1.0"
-source = "git+https://github.com/vhrdtech/ww_stdlib#53da436cd7868181532aa6f96457911bbf201edf"
+source = "git+https://github.com/vhrdtech/ww_stdlib#7beabe1e40aee2b3de678f0fea92bf1b6bae3101"
 dependencies = [
  "defmt",
  "ww_api",
@@ -2661,7 +2661,7 @@ dependencies = [
 [[package]]
 name = "ww_log"
 version = "0.1.0"
-source = "git+https://github.com/vhrdtech/ww_stdlib#53da436cd7868181532aa6f96457911bbf201edf"
+source = "git+https://github.com/vhrdtech/ww_stdlib#7beabe1e40aee2b3de678f0fea92bf1b6bae3101"
 dependencies = [
  "ww_api",
 ]
@@ -2687,7 +2687,7 @@ dependencies = [
 [[package]]
 name = "ww_pin_diag"
 version = "0.1.0"
-source = "git+https://github.com/vhrdtech/ww_stdlib#53da436cd7868181532aa6f96457911bbf201edf"
+source = "git+https://github.com/vhrdtech/ww_stdlib#7beabe1e40aee2b3de678f0fea92bf1b6bae3101"
 dependencies = [
  "defmt",
  "ww_api",
@@ -2699,7 +2699,7 @@ dependencies = [
 [[package]]
 name = "ww_report"
 version = "0.5.0"
-source = "git+https://github.com/vhrdtech/ww_stdlib#53da436cd7868181532aa6f96457911bbf201edf"
+source = "git+https://github.com/vhrdtech/ww_stdlib#7beabe1e40aee2b3de678f0fea92bf1b6bae3101"
 dependencies = [
  "addr2line",
  "anyhow",
@@ -2843,7 +2843,7 @@ dependencies = [
 [[package]]
 name = "ww_uid"
 version = "0.1.0"
-source = "git+https://github.com/vhrdtech/ww_stdlib#53da436cd7868181532aa6f96457911bbf201edf"
+source = "git+https://github.com/vhrdtech/ww_stdlib#7beabe1e40aee2b3de678f0fea92bf1b6bae3101"
 dependencies = [
  "ww_api",
 ]
@@ -2851,7 +2851,7 @@ dependencies = [
 [[package]]
 name = "ww_user_info"
 version = "0.1.0"
-source = "git+https://github.com/vhrdtech/ww_stdlib#53da436cd7868181532aa6f96457911bbf201edf"
+source = "git+https://github.com/vhrdtech/ww_stdlib#7beabe1e40aee2b3de678f0fea92bf1b6bae3101"
 dependencies = [
  "defmt",
  "ww_api",
