@@ -9,6 +9,7 @@ All notable changes to this project are documented here. The format follows
 
 - **Breaking:** WireWeaver crates come from their new repositories: `wire_weaver` (framework), `ww_base` (`ww_si`, `ww_date_time`, `ww_error`), `ww_stdlib` (standard APIs); `ww` installs from `ww_tools`.
 - **Breaking:** `cannify_micro_api` 0.3.0 on wire line `w1.0`: takes `ww_api`; `Settings` answers common errors only; the standard APIs' typed numbers.
+- API snapshots in WireWeaver's model format 0.4.0 (EVO-82); older versions converted, the current one saved again.
 - `cannify dfu` shows the update node's app image and security floor instead of the app version.
 
 ## [0.1.1] - 2026-11-07

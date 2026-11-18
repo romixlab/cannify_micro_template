@@ -1,7 +1,7 @@
 // cannify_micro_api 0.3.0 traits and types, saved by `ww api save`.
 // Do not edit, bump the crate version and save a new snapshot instead.
-// shrink_wrap sha256: 0f5465880bf8b1e8e06031e4ec67616ffec81ec30e1052c2c5caaad606fbb78e
-(magic: 2837124336, ww_self_version: (major: 0, minor: 3, patch: 0), root: (docs: [
+// shrink_wrap sha256: d68e5a1345b6eb66ba83ee175dc0fa5fa28145a72226c1310a6f97da2a36bc28
+(magic: 2837124336, ww_self_version: (major: 0, minor: 4, patch: 0), root: (docs: [
     "WireWeaver API of the cannify_micro firmware (`../cannify_micro_api`), served by `../firmware/src/ww.rs`.",
     "",
     "The crate name and version identify the API on the wire (`CANNIFY_MICRO_API_FULL_GID`), so bump the version with every",
