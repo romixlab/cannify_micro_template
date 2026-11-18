@@ -5,6 +5,8 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-11-18
+
 ### Changed
 
 - **Breaking:** WireWeaver crates come from their new repositories: `wire_weaver` (framework), `ww_base` (`ww_si`, `ww_date_time`, `ww_error`), `ww_stdlib` (standard APIs); `ww` installs from `ww_tools`.
